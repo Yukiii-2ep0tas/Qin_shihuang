@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="center-div">
+        <div id="input_area">
+            输入区域
+            <div id="dropdown">
+                <button onclick="toggleDropdown()">Select Item</button>
+                <div id="dropdown-content" id="dropdown-content">
+                <input type="text" id="search-input" placeholder="Search..." onkeyup="filterOptions()">
+                <a href="#">Apple</a>
+                <a href="#">Orange</a>
+                <a href="#">Banana</a>
+                </div>
+            </div>
+            <div id="input_display" contenteditable="true" style="position: relative;right: 3%;top: 17%;font-size: 48px;text-align: right;"></div>
+        </div>
+        <div id="output_area">
+            输出区域
+            <div id="dropdown">
+                <button onclick="toggleDropdown()">Select Item</button>
+                <div id="dropdown-content" id="dropdown-content">
+                <input type="text" id="search-input" placeholder="Search..." onkeyup="filterOptions()">
+                <a href="#">iPhone</a>
+                <a href="#">Bottle of Water</a>
+                <a href="#">Laptop</a>
+                </div>
+            </div>
+            <div id="result_display" contenteditable="true" style="position: absolute;right: 18%;top: 22%;font-size: 48px"></div>
+        </div>
+        <div class="numpad_area">
+            <div onclick="input(1)">1</div>
+            <div onclick="input(2)">2</div>
+            <div onclick="input(3)">3</div>
+            <div onclick="backspace()">-</div>
+            <div onclick="input(4)">4</div>
+            <div onclick="input(5)">5</div>
+            <div onclick="input(6)">6</div>
+            <div onclick="by_text()">T</div>
+            <div onclick="input(7)">7</div>
+            <div onclick="input(8)">8</div>
+            <div onclick="input(9)">9</div>
+            <div onclick="clean_all()">AC</div>
+            <div onclick="input(0)">0</div>
+            <div onclick="input(0)"></div>
+            <div onclick="decimal_dot()">.</div>
+            <div onclick="ans()">=</div>
+        </div>
+    </div>
+</body>
+<script>
+    function clean_all(){
+        var display = document.getElementById('input_display');
+        display.textContent = ''
+    }
+    function input(num){
+        var display = document.getElementById('input_display');
+        var current_value = display.textContent;
+        if (current_value === '0' && num === '0'){
+            display.textContent = '2 zero mistake';//不重复添加0
+            return;
+        }
+        display.textContent = current_value + num;
+    }
+    function decimal_dot(){
+        var display = document.getElementById('input_display');
+        var current_value = display.textContent;
+        if (current_value.includes('.')){
+            display.textContent = '2 decimal dots mistake';
+            return;
+        }
+        display.textContent += '.'
+    }
+    function ans(){
+        var display = document.getElementById('result_display');
+        var result = parseFloat(display.textContent);
+        if (!isNaN(result)){
+            display.textContent = result;
+        } else{
+            alert('invalid input');
+        }
+    }
+    function backspace(){
+        var display = document.getElementById('input_display');
+        current_value = display.textContent;
+        length = current_value.length-1;
+        current_value = current_value.slice(0,length);
+        display.textContent = current_value;
+    }
+    function toggleDropdown(){
+        document.getElementById("dropdown-content").style.display = "block";
+    }
+    function filterOptions(){
+        var input, filter, ul, li, a, i;
+        input = document.getElementById("search-input");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("dropdown-content");
+        li = ul.getElementsByTagName("a");
+        for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[0];
+            if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+            } else {
+            li[i].style.display = "none";
+            }
+        }
+    }
+</script>
