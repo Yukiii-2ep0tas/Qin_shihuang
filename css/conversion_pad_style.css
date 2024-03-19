@@ -29,7 +29,7 @@
     /* 其他样式，如宽度、背景色等 */
     width: 100%;           /* 容器宽度设置为100% */
     flex-direction: column;
-    min-height: 600px;
+    min-height: 100%;
   }
 #input_area {
     height: 13.5%;
