@@ -5,8 +5,33 @@
 
 <body>
     <div id="background">
-        <div style="background-color: black;">
-            11111111111
+        <div class="select_area">
+            <div class="category_area">
+                <!-- 分类标签 -->
+                <div class="category_item" data-category="all">Fruit</div>
+                <div class="category_item" data-category="books">Books</div>
+                <div class="category_item" data-category="electronics">Electronics</div>
+                <div class="category_item" data-category="clothing">Clothing</div>
+                <div class="category_item" data-category="toys">Toys</div>
+            </div>
+            <div class="items-grid">
+                <!-- 物品展示区域 -->
+                <div class="item" onclick="toggle_conversion('apple')">Apple</div>
+                <div class="item" onclick="toggle_conversion('iPhone')">iPhone</div>
+                <div class="item">Item 3</div>
+                <div class="item">Item 4</div>
+                <div class="item">Item 5</div>
+                <div class="item">Item 6</div>
+                <div class="item">Item 7</div>
+                <div class="item">Item 8</div>
+                <!-- 更多物品... -->
+            </div>
         </div>
     </div>
 </body>
+
+<script>
+    function toggle_conversion(itemText){
+        window.parent.postMessage({action: 'update_input_item_name', text: itemText}, '*')
+    }
+</script>

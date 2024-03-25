@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Item Search Bar with Categories</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .search-bar {
+            display: flex;
+            height: 100vh; /* 使查找栏填满整个视口高度 */
+        }
+        .categories {
+            width: 25%; /* 分类标签宽度占25% */
+            overflow-y: auto; /* 允许垂直滚动 */
+            padding: 20px;
+            background-color: #f0f0f0; /* 背景颜色 */
+        }
+        .category {
+            padding: 10px;
+            cursor: pointer;
+            background-color: #e0e0e0; /* 背景颜色 */
+        }
+        .category.active {
+            background-color: #d0d0d0; /* 选中的分类标签背景颜色 */
+        }
+        .items-grid {
+            width: 75%; /* 物品展示区域宽度占75% */
+            overflow-y: auto; /* 允许垂直滚动 */
+            display: flex;
+            flex-wrap: wrap; /* 允许网格换行 */
+            padding: 20px;
+        }
+        .item {
+            width: 25%; /* 每个物品占据网格的25%宽度 */
+            padding: 10px;
+            border: 1px solid #ccc; /* 物品边框 */
+            box-sizing: border-box; /* 边框和内边距包含在宽度内 */
+        }
+    </style>
+</head>
+<body>
+
+<div class="search-bar">
+    <div class="categories">
+        <!-- 分类标签 -->
+        <div class="category" data-category="all">All</div>
+        <div class="category" data-category="books">Books</div>
+        <div class="category" data-category="electronics">Electronics</div>
+        <div class="category" data-category="clothing">Clothing</div>
+        <div class="category" data-category="toys">Toys</div>
+    </div>
+    <div class="items-grid">
+        <!-- 物品展示区域 -->
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <!-- 更多物品... -->
+    </div>
+</div

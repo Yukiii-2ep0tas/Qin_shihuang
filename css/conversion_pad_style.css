@@ -3,11 +3,13 @@
     height: 100%;
     font-size: 30px;
     background-color: rgba(255, 255, 255, 0.6);
+    border: 1px solid black;
     font-weight: lighter;
     text-align: center;
     line-height: 3;
     min-width: 60%;
     min-height: 100%;
+    cursor: pointer;
 }
 .numpad_area_touch div{
     width: 100%;
@@ -36,18 +38,13 @@
     height: 40%;
     display: grid;
     grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr);
     background-image: linear-gradient(rgba(151,134,255),rgba(225,161,255)) ;
     place-items: center;
     min-width: 200px;
     min-height: 350px;
     max-width: 400px;
     max-height: 40%;
-}
-.numpad_area > div:nth-child(4),
-.numpad_area > div:nth-child(8),
-.numpad_area > div:nth-child(12),
-.numpad_area > div:nth-child(16){
-  background-color:rgba(255, 255, 255, 0.7);
 }
 .center-div {
     display: flex;        /* 启用Flexbox布局 */
@@ -60,6 +57,7 @@
     min-height: 100vh;
   }
 #input_area {
+    position: relative;
     height: 15.5%;
     width: 80%;
     min-width: 200px;
@@ -68,6 +66,7 @@
     background-image: linear-gradient(rgba(242,113,199),rgba(151,134,255));
 }
 #output_area {
+    position: relative;
     height: 15.5%;
     width: 80%;
     min-width: 200px;
@@ -75,47 +74,31 @@
     max-height: 40%;
     background-image: linear-gradient(rgba(41,139,255),rgba(122,198,240));
 }
-#input_search_bar {
-    background-color: white;
-    position: relative;
-    width: 40%;
-    height: 23%;
-    left: 5%;
-    top: 7%;
-}
-#dropdown {
+.search_bar {
     display: inline-block;
     position: relative;
     left: 5%;
     top: 10%;
-    width: 33%;
-    height: 25%;
+    width: 40%;
+    height: 23%;
     background: rgba(255, 255, 255, 0.4);
     border-radius: 40px;
+    cursor: pointer;
   }
+.embedded-content {
+  display: none; /* 默认不显示嵌入的内容 */
+  position: relative;
+  z-index: 1000;
+}
 
-#dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 16%;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-#dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-#dropdown-content a:hover {
-    background-color: #f1f1f1;
-  }
-#dropdown:hover #dropdown-content {
-    display: block;
-  }
-#dropdown:hover .search-input {
-    display: block;
-  }
+.numpad_area > div:nth-child(4),
+.numpad_area > div:nth-child(8),
+.numpad_area > div:nth-child(12),
+.numpad_area > div:nth-child(16){
+  background-color:rgba(255, 255, 255, 0.7);
+}
+.numpad_area > div:nth-child(13){
+  grid-column: span 2;
+}
 
 
