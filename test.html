@@ -2,62 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Item Search Bar with Categories</title>
+    <title>2x2 Grid with Clickable Links</title>
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* 创建两列，每列大小相同 */
+            grid-template-rows: 1fr 1fr; /* 创建两行，每行大小相同 */
+            gap: 10px; /* 设置网格间隙 */
         }
-        .search-bar {
-            display: flex;
-            height: 100vh; /* 使查找栏填满整个视口高度 */
+
+        .grid-item {
+            background-color: #f0f0f0; /* 网格项的背景颜色 */
+            border: 1px solid #ccc; /* 边框 */
+            padding: 20px; /* 内边距 */
+            text-align: center; /* 文本居中 */
+            cursor: pointer; /* 鼠标悬停时显示手形光标 */
         }
-        .categories {
-            width: 25%; /* 分类标签宽度占25% */
-            overflow-y: auto; /* 允许垂直滚动 */
-            padding: 20px;
-            background-color: #f0f0f0; /* 背景颜色 */
-        }
-        .category {
-            padding: 10px;
-            cursor: pointer;
-            background-color: #e0e0e0; /* 背景颜色 */
-        }
-        .category.active {
-            background-color: #d0d0d0; /* 选中的分类标签背景颜色 */
-        }
-        .items-grid {
-            width: 75%; /* 物品展示区域宽度占75% */
-            overflow-y: auto; /* 允许垂直滚动 */
-            display: flex;
-            flex-wrap: wrap; /* 允许网格换行 */
-            padding: 20px;
-        }
-        .item {
-            width: 25%; /* 每个物品占据网格的25%宽度 */
-            padding: 10px;
-            border: 1px solid #ccc; /* 物品边框 */
-            box-sizing: border-box; /* 边框和内边距包含在宽度内 */
+
+        /* 为网格项添加过渡效果 */
+        .grid-item:hover {
+            background-color: #e0e0e0;
         }
     </style>
 </head>
 <body>
 
-<div class="search-bar">
-    <div class="categories">
-        <!-- 分类标签 -->
-        <div class="category" data-category="all">All</div>
-        <div class="category" data-category="books">Books</div>
-        <div class="category" data-category="electronics">Electronics</div>
-        <div class="category" data-category="clothing">Clothing</div>
-        <div class="category" data-category="toys">Toys</div>
+<div class="grid-container">
+    <!-- 第一个网格项 -->
+    <div class="grid-item" onclick="location.href='link1.html';">
+        Link 1
     </div>
-    <div class="items-grid">
-        <!-- 物品展示区域 -->
-        <div class="item">Item 1</div>
-        <div class="item">Item 2</div>
-        <div class="item">Item 3</div>
-        <div class="item">Item 4</div>
-        <!-- 更多物品... -->
+    <!-- 第二个网格项 -->
+    <div class="grid-item" onclick="location.href='link2.html';">
+        Link 2
     </div>
-</div
+    <!-- 第三个网格项 -->
+    <div class="grid-item" onclick="location.href='link3.html';">
+        Link 3
+    </div>
+    <!-- 第四个网格项 -->
+    <div class="grid-item" onclick="location.href='link4.html';">
+        Link 4
+    </div>
+</div>
+
+</body>
+</html>
