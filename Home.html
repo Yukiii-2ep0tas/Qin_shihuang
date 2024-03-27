@@ -1,33 +1,35 @@
 <!DOCTYPE html>
 <!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
 <!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+
 <head>
 
-   <!--- basic page needs
+	<!--- basic page needs
    ================================================== -->
-   <meta charset="utf-8">
+	<meta charset="utf-8">
 	<title>秦始皇</title>
-	<meta name="description" content="">  
+	<meta name="description" content="">
 	<meta name="author" content="">
 
-   <!-- mobile specific metas
+	<!-- mobile specific metas
    ================================================== -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
- 	<!-- CSS
+	<!-- CSS
    ================================================== -->
-   <link rel="stylesheet" href="css/base.css">
-   <link rel="stylesheet" href="css/vendor.min.css">
-   <link rel="stylesheet" href="css/main.css">     
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/vendor.min.css">
+	<link rel="stylesheet" href="css/main.css">
 
-   <!-- script
+	<!-- script
    ================================================== -->
 	<script src="js/modernizr.js"></script>
 
-   <!-- favicons
+	<!-- favicons
 	================================================== -->
-	<link rel="shortcut icon" href="pic.png" >
+	<link rel="shortcut icon" href="pic.png">
 
 </head>
 
@@ -35,752 +37,785 @@
 
 	<!-- header
    ================================================== -->
-   <header id="main-header">
+	<header id="main-header">
 
-   	<div class="row">
+		<div class="row">
 
-	      <div class="logo">
-	         <a href="Main-index.html">秦始皇</a>
-	      </div>
+			<div class="logo">
+				<a href="Main-index.html">秦始皇</a>
+			</div>
 
-	      <nav id="nav-wrap">         
-	         
-	         <a class="mobile-btn" href="#nav-wrap" title="Show navigation">
-	         	<span class="menu-icon">Menu</span>
-	         </a>
-         	<a class="mobile-btn" href="#" title="Hide navigation">
-         		<span class="menu-icon">Menu</span>
-         	</a>            
+			<nav id="nav-wrap">
 
-	         <ul id="nav" class="nav">
-	            <li><a class="smoothscroll" href="#hero">首页</a></li>
-		        <li><a class="smoothscroll" href="#portfolio">单位换算</a></li>
-	            <li><a class="smoothscroll" href="#services">兴趣知识</a></li>
-	            <li><a class="smoothscroll" href="#about">生活经验</a></li>
-	            <li><a class="smoothscroll" href="#contact">关于我们</a></li>
-	         </ul> <!-- end #nav -->
+				<a class="mobile-btn" href="#nav-wrap" title="Show navigation">
+					<span class="menu-icon">Menu</span>
+				</a>
+				<a class="mobile-btn" href="#" title="Hide navigation">
+					<span class="menu-icon">Menu</span>
+				</a>
 
-	      </nav> <!-- end #nav-wrap -->
+				<ul id="nav" class="nav">
+					<li><a class="smoothscroll" href="#hero">首页</a></li>
+					<li><a class="smoothscroll" href="#portfolio">单位换算</a></li>
+					<li><a class="smoothscroll" href="#services">兴趣知识</a></li>
+					<li><a class="smoothscroll" href="#about">生活经验</a></li>
+					<li><a class="smoothscroll" href="#contact">关于我们</a></li>
+				</ul> <!-- end #nav -->
 
-	   </div>
+			</nav> <!-- end #nav-wrap -->
 
-   </header> <!-- end header -->
+		</div>
+
+	</header> <!-- end header -->
 
 
-   <!-- homepage hero
+	<!-- homepage hero
    ================================================== -->
-   <section id="hero">	
-   	  
+	<section id="hero">
+
 		<div class="row hero-content">
 
 			<div class="twelve columns hero-container">
 
-			   <!-- hero-slider start-->
-			   <div id="hero-slider" class="flexslider">
+				<!-- hero-slider start-->
+				<div id="hero-slider" class="flexslider">
 
-				   <ul class="slides">
-					   <!-- slide -->
-					   <li>
-						   <div class="flex-caption">
+					<ul class="slides">
+						<!-- slide -->
+						<li>
+							<div class="flex-caption">
 								<h1>欢迎使用“秦始皇”！</h1>
-								<h2>统一度量衡，换算不头疼</h2>			   
-							</div>						
-					   </li>
-				   </ul>
+								<h2>统一度量衡，换算不头疼</h2>
+							</div>
+						</li>
+					</ul>
 
-			   </div> <!-- end hero-slider -->				   
+				</div> <!-- end hero-slider -->
 
-	      </div> <!-- end twelve columns-->
+			</div> <!-- end twelve columns-->
 
-		</div> <!-- end row -->	
+		</div> <!-- end row -->
 
 		<div id="more">
-		    <a class="smoothscroll" href="Conversion_Pad.html">开始换算<i class="fa fa-angle-down"></i></a>
-		</div> 	
+			<a onclick="location.href = 'Conversion_Pad.html'">开始换算</a> <!-- 开始换算按钮，跳转到换算器页面-->
+		</div>
 
-   </section> <!-- end homepage hero -->
+	</section>
+	<!-- end homepage hero -->
 
 
-   <!-- portfolio
+	<!-- portfolio
    ================================================== -->
-   <section id="portfolio">
+	<section id="portfolio">
 
-      <div class="row section-head">
+		<div class="row section-head">
 
-      	<div class="twelve columns">
+			<div class="twelve columns">
 
-      		<h1>请设置你心仪的计量单位并开始进行换算</h1>
+				<h1>请设置你心仪的计量单位并开始进行换算</h1>
 
-	    </div>
+			</div>
 
-      </div> <!-- end section-head -->
+		</div> <!-- end section-head -->
 
-    
-         
 
-         <!-- modal popup
+
+
+		<!-- modal popup
 	   	========================================================= -->
-         <div id="modal-01" class="popup-modal mfp-hide">
+		<div id="modal-01" class="popup-modal mfp-hide">
 
-		      <div class="media">
-	      		<img src="images/portfolio/modals/m-underwater.jpg" alt="Underwater" />
-	      	</div>
+			<div class="media">
+				<img src="images/portfolio/modals/a_bottle_of_nongfu_spring.png">
+			</div>
 
-		      <div class="description-box">
-			      <h4>Underwater</h4>
-			      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-               <span class="categories">Videography</span>
-		      </div>
+			<div class="description-box">
+				<h4>你知道昆明湖到底有多少水吗？</h4>
+				<p>昆明湖的水量多达</p>
+			</div>
 
-            <div class="link-box group">
-            	<a href="http://www.behance.net">Details</a>
-            	<a href="#" class="popup-modal-dismiss">Close</a>         
-            </div>
+			<div class="link-box group">
+				<a href="http://www.behance.net">去换算页面体验</a>
+				<a href="#" class="popup-modal-dismiss">关闭</a>
+			</div>
 
-	      </div><!-- modal-01 end -->
+		</div><!-- modal-01 end -->
 
-         <div id="modal-02" class="popup-modal mfp-hide">
+		<div id="modal-02" class="popup-modal mfp-hide">
 
-		      <div class="media">
-	      		<img src="images/portfolio/modals/m-hotel.jpg" alt="Hotel Sign" />
-	      	</div>
+			<div class="media">
+				<img src="images/portfolio/modals/m-hotel.jpg" alt="Hotel Sign" />
+			</div>
 
-		      <div class="description-box">
-			      <h4>Hotel Sign</h4>
-			      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-               <span class="categories">Branding, Web Development</span>
-		      </div>
+			<div class="description-box">
+				<h4>Hotel Sign</h4>
+				<p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi
+					elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+				<span class="categories">Branding, Web Development</span>
+			</div>
 
-            <div class="link-box">            	
-               <a href="http://www.behance.net">Details</a>
-		         <a href="#" class="popup-modal-dismiss">Close</a>
-            </div>
+			<div class="link-box">
+				<a href="http://www.behance.net">Details</a>
+				<a href="#" class="popup-modal-dismiss">Close</a>
+			</div>
 
-	      </div><!-- modal-02 end -->
+		</div><!-- modal-02 end -->
 
-         <div id="modal-03" class="popup-modal mfp-hide">
+		<div id="modal-03" class="popup-modal mfp-hide">
 
-		      <div class="media">
-	      		<img src="images/portfolio/modals/m-beetle.jpg" alt="" />
-	      	</div>
+			<div class="media">
+				<img src="images/portfolio/modals/m-beetle.jpg" alt="" />
+			</div>
 
-		      <div class="description-box">
-			      <h4>Beetle</h4>
-			      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-               <span class="categories">Webdesign</span>
-		      </div>
+			<div class="description-box">
+				<h4>Beetle</h4>
+				<p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi
+					elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+				<span class="categories">Webdesign</span>
+			</div>
 
-            <div class="link-box">
-               <a href="http://www.behance.net">Details</a>
-		         <a href="#" class="popup-modal-dismiss">Close</a>
-            </div>
+			<div class="link-box">
+				<a href="http://www.behance.net">Details</a>
+				<a href="#" class="popup-modal-dismiss">Close</a>
+			</div>
 
-	      </div><!-- modal-03 end -->
+		</div><!-- modal-03 end -->
 
-			<div id="modal-04" class="popup-modal mfp-hide">
+		<div id="modal-04" class="popup-modal mfp-hide">
 
-		      <div class="media">
-	      		<img src="images/portfolio/modals/m-banjo-player.jpg" alt="" />
-	      	</div>
+			<div class="media">
+				<img src="images/portfolio/modals/m-banjo-player.jpg" alt="" />
+			</div>
 
-		      <div class="description-box">
-			      <h4>Banjo Player</h4>
-			      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-               <span class="categories">Photography</span>
-		      </div>
+			<div class="description-box">
+				<h4>Banjo Player</h4>
+				<p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi
+					elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+				<span class="categories">Photography</span>
+			</div>
 
-            <div class="link-box">
-               <a href="http://www.behance.net">Details</a>
-		         <a href="#" class="popup-modal-dismiss">Close</a>
-            </div>
+			<div class="link-box">
+				<a href="http://www.behance.net">Details</a>
+				<a href="#" class="popup-modal-dismiss">Close</a>
+			</div>
 
-	      </div><!-- modal-04 end -->
+		</div><!-- modal-04 end -->
 
-	      <div id="modal-05" class="popup-modal slider mfp-hide">	
+		<div id="modal-05" class="popup-modal slider mfp-hide">
 
-	      	<div class="media">
-	      		<img src="images/portfolio/modals/m-lighthouse.jpg" alt="" />
-	      	</div>      	
+			<div class="media">
+				<img src="images/portfolio/modals/m-lighthouse.jpg" alt="" />
+			</div>
 
-		      <div class="description-box">
-			      <h4>Lighthouse</h4>		      
+			<div class="description-box">
+				<h4>Lighthouse</h4>
 
-			      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+				<p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi
+					elit consequat ipsum, nec sagittis sem nibh id elit.</p>
 
-			      <div class="categories">Web Development</div>
-               
-		      </div>
+				<div class="categories">Web Development</div>
 
-            <div class="link-box">
-               <a href="http://www.behance.net">Details</a>
-		         <a href="#" class="popup-modal-dismiss">Close</a>
-            </div>		      
+			</div>
 
-	      </div><!-- modal-05 end -->
+			<div class="link-box">
+				<a href="http://www.behance.net">Details</a>
+				<a href="#" class="popup-modal-dismiss">Close</a>
+			</div>
 
-	      <div id="modal-06" class="popup-modal mfp-hide">
+		</div><!-- modal-05 end -->
 
-		      <div class="media">
-	      		<img src="images/portfolio/modals/m-girl.jpg" alt="" />
-	      	</div>	
+		<div id="modal-06" class="popup-modal mfp-hide">
 
-		      <div class="description-box">
-			      <h4>Girl Stuff</h4>			      
+			<div class="media">
+				<img src="images/portfolio/modals/m-girl.jpg" alt="" />
+			</div>
 
-			      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+			<div class="description-box">
+				<h4>Girl Stuff</h4>
 
-			      <div class="categories">Photography</div>
-               
-		      </div>
+				<p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi
+					elit consequat ipsum, nec sagittis sem nibh id elit.</p>
 
-            <div class="link-box">
-               <a href="http://www.behance.net">Details</a>
-		         <a href="#" class="popup-modal-dismiss">Close</a>
-            </div>
+				<div class="categories">Photography</div>
 
-	      </div><!-- modal-06 end -->
+			</div>
 
-	      <div id="modal-07" class="popup-modal mfp-hide">
+			<div class="link-box">
+				<a href="http://www.behance.net">Details</a>
+				<a href="#" class="popup-modal-dismiss">Close</a>
+			</div>
 
-		      <div class="media">
-	      		<img src="images/portfolio/modals/m-coffee.jpg" alt="" />
-	      	</div>	
+		</div><!-- modal-06 end -->
 
-		      <div class="description-box">
-			      <h4>Coffee Cup</h4>			      
+		<div id="modal-07" class="popup-modal mfp-hide">
 
-			      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+			<div class="media">
+				<img src="images/portfolio/modals/m-coffee.jpg" alt="" />
+			</div>
 
-			      <div class="categories">Branding</div>
-               
-		      </div>
+			<div class="description-box">
+				<h4>Coffee Cup</h4>
 
-            <div class="link-box">
-               <a href="http://www.behance.net">Details</a>
-		         <a href="#" class="popup-modal-dismiss">Close</a>
-            </div>
+				<p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi
+					elit consequat ipsum, nec sagittis sem nibh id elit.</p>
 
-	      </div><!-- modal-07 end -->
+				<div class="categories">Branding</div>
 
-	      <div id="modal-08" class="popup-modal mfp-hide">
+			</div>
 
-		      <div class="media">
-	      		<img src="images/portfolio/modals/m-judah.jpg" alt="" />
-	      	</div>	
+			<div class="link-box">
+				<a href="http://www.behance.net">Details</a>
+				<a href="#" class="popup-modal-dismiss">Close</a>
+			</div>
 
-		      <div class="description-box">
-			      <h4>Judah</h4>			      
+		</div><!-- modal-07 end -->
 
-			      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+		<div id="modal-08" class="popup-modal mfp-hide">
 
-			      <div class="categories">Webdesign</div>
-               
-		      </div>
+			<div class="media">
+				<img src="images/portfolio/modals/m-judah.jpg" alt="" />
+			</div>
 
-            <div class="link-box">
-               <a href="http://www.behance.net">Details</a>
-		         <a href="#" class="popup-modal-dismiss">Close</a>
-            </div>
+			<div class="description-box">
+				<h4>Judah</h4>
 
-	      </div><!-- modal-08 end -->
+				<p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi
+					elit consequat ipsum, nec sagittis sem nibh id elit.</p>
 
-      </div>  <!-- end row -->
+				<div class="categories">Webdesign</div>
 
-   </section> <!-- end portfolio -->
+			</div>
+
+			<div class="link-box">
+				<a href="http://www.behance.net">Details</a>
+				<a href="#" class="popup-modal-dismiss">Close</a>
+			</div>
+
+		</div><!-- modal-08 end -->
+
+		</div> <!-- end row -->
+
+	</section> <!-- end portfolio -->
 
 
-   <!-- Services Section
+	<!-- Services Section
    ================================================== -->
-   <section id="services">
+	<section id="services">
 
-   	<div class="row section-head">
+		<div class="row section-head">
 
-      	<div class="twelve columns">
+			<div class="twelve columns">
 
-      		<h1>这里是一些有趣的单位换算知识<span>.</span></h1>
+				<h1>这里是一些有趣的单位换算知识<span>.</span></h1>
 
-	         <hr />      	         
+				<hr />
 
-	         <p>一个昆明湖的水量相当于36.36亿瓶550毫升的矿泉水，堆积起来有一栋三层小楼那么大！<br>
-                                 这就是秦始皇所能带给你的直观的单位换算！
-	         </p>
+				<p>一个昆明湖的水量相当于36.36亿瓶550毫升的矿泉水，堆积起来有一栋三层小楼那么大！<br>
+					这就是秦始皇所能带给你的直观的单位换算！
+				</p>
 
-		<div id="more">
-		      <a class="smoothscroll" href="#services">●下一条<i class="fa fa-angle-down"></i></a>
-		</div> 	
+				<div id="more">
+					<a class="smoothscroll" href="#services">●下一条<i class="fa fa-angle-down"></i></a>
+				</div>
 
-	      </div>
+			</div>
 
-      </div> <!-- end section-head -->
-  <div class="row items">
+		</div> <!-- end section-head -->
+		<div class="row items">
 
-         <!-- portfolio-wrapper -->
-         <div id="portfolio-wrapper" class="bgrid-fourth s-bgrid-third tab-bgrid-half">
+			<!-- portfolio-wrapper -->
+			<div id="portfolio-wrapper" class="bgrid-fourth s-bgrid-third tab-bgrid-half">
 
-            <div class="bgrid folio-item">
-               <div class="item-wrap">
-                  <a href="#modal-01">
-	                  <img src="images/portfolio/pic1.jpg" alt="昆明湖">
-                     <div class="overlay"></div>                       
-                     <div class="portfolio-item-meta">
-     					      <h5>昆明湖</h5>
-                        <p>Videography</p>
-     					   </div> 
-                     <div class="link-icon"><i class="fa fa-plus"></i></div>
-                  </a>
-               </div>
-        		</div> <!-- item end -->
+				<div class="bgrid folio-item">
+					<div class="item-wrap">
+						<a href="#modal-01">
+							<img src="images/portfolio/pic1.jpg" alt="昆明湖">
+							<div class="overlay"></div>
+							<div class="portfolio-item-meta">
+								<h5>昆明湖</h5>
+								<p>点 击 探 索</p>
+							</div>
+							<div class="link-icon"><i class="fa fa-plus"></i></div>
+						</a>
+					</div>
+				</div> <!-- item end -->
 
-            <div class="bgrid folio-item">
-               <div class="item-wrap">
-                  <a href="#modal-02">
-                     <img src="images/portfolio/pic2.jpg" alt="橘子">
-                     <div class="overlay">
-                      <div class="portfolio-item-meta">
-          					   <h5>橘子</h5>
-                           <p>Branding</p>
-          					</div>
-                     </div>
-                     <div class="link-icon"><i class="fa fa-plus"></i></div>
-                  </a>
-               </div>
-         	</div> <!-- item end -->
+				<div class="bgrid folio-item">
+					<div class="item-wrap">
+						<a href="#modal-02">
+							<img src="images/portfolio/pic2.jpg" alt="橘子">
+							<div class="overlay">
+								<div class="portfolio-item-meta">
+									<h5>橘子</h5>
+									<p>Branding</p>
+								</div>
+							</div>
+							<div class="link-icon"><i class="fa fa-plus"></i></div>
+						</a>
+					</div>
+				</div> <!-- item end -->
 
-            <div class="bgrid folio-item">
-               <div class="item-wrap">
-                  <a href="#modal-03">
-                     <img src="images/portfolio/pic3.jpg" alt="电视">                        
-                     <div class="overlay">
-                      <div class="portfolio-item-meta">
-          					   <h5>电视</h5>
-                           <p>Webdesign</p>
-          					</div>
-                     </div>
-                     <div class="link-icon"><i class="fa fa-plus"></i></div>
-                  </a>
-               </div>
-         	</div> <!-- item end -->
+				<div class="bgrid folio-item">
+					<div class="item-wrap">
+						<a href="#modal-03">
+							<img src="images/portfolio/pic3.jpg" alt="电视">
+							<div class="overlay">
+								<div class="portfolio-item-meta">
+									<h5>电视</h5>
+									<p>Webdesign</p>
+								</div>
+							</div>
+							<div class="link-icon"><i class="fa fa-plus"></i></div>
+						</a>
+					</div>
+				</div> <!-- item end -->
 
-            <div class="bgrid folio-item">
-               <div class="item-wrap">
-                  <a href="#modal-04">
-                     <img src="images/portfolio/pic4.jpg" alt="按摩椅">
-                     <div class="overlay">
-                      <div class="portfolio-item-meta">
-          					   <h5>按摩椅</h5>
-                           <p>Photography</p>
-          					</div>
-                     </div>
-                     <div class="link-icon"><i class="fa fa-plus"></i></div>
-                  </a>
-               </div>
-         	</div> <!-- item end -->
+				<div class="bgrid folio-item">
+					<div class="item-wrap">
+						<a href="#modal-04">
+							<img src="images/portfolio/pic4.jpg" alt="按摩椅">
+							<div class="overlay">
+								<div class="portfolio-item-meta">
+									<h5>按摩椅</h5>
+									<p>Photography</p>
+								</div>
+							</div>
+							<div class="link-icon"><i class="fa fa-plus"></i></div>
+						</a>
+					</div>
+				</div> <!-- item end -->
 
-            <div class="bgrid folio-item">
-               <div class="item-wrap">
-                  <a href="#modal-05">
-                   <img src="images/portfolio/pic5.jpg" alt="运动鞋">
-                     <div class="overlay">
-                      <div class="portfolio-item-meta">
-          					   <h5>运动鞋</h5>
-                           <p>Web Development</p>
-          					</div>
-                     </div>
-                     <div class="link-icon"><i class="fa fa-plus"></i></div>
-                  </a>
-               </div>
-         	</div> <!-- item end -->
+				<div class="bgrid folio-item">
+					<div class="item-wrap">
+						<a href="#modal-05">
+							<img src="images/portfolio/pic5.jpg" alt="运动鞋">
+							<div class="overlay">
+								<div class="portfolio-item-meta">
+									<h5>运动鞋</h5>
+									<p>Web Development</p>
+								</div>
+							</div>
+							<div class="link-icon"><i class="fa fa-plus"></i></div>
+						</a>
+					</div>
+				</div> <!-- item end -->
 
-            <div class="bgrid folio-item">
-               <div class="item-wrap">
-                  <a href="#modal-06">
-                     <img src="images/portfolio/pic6.jpg" alt="电子产品">
-                     <div class="overlay">
-                      <div class="portfolio-item-meta">
-          					   <h5>电子产品</h5>
-                           <p>Photography</p>
-          					</div>
-                     </div>
-                     <div class="link-icon"><i class="fa fa-plus"></i></div>
-                  </a>
-               </div>
-         	</div> <!-- item end -->
+				<div class="bgrid folio-item">
+					<div class="item-wrap">
+						<a href="#modal-06">
+							<img src="images/portfolio/pic6.jpg" alt="电子产品">
+							<div class="overlay">
+								<div class="portfolio-item-meta">
+									<h5>电子产品</h5>
+									<p>Photography</p>
+								</div>
+							</div>
+							<div class="link-icon"><i class="fa fa-plus"></i></div>
+						</a>
+					</div>
+				</div> <!-- item end -->
 
-            <div class="bgrid folio-item">
-               <div class="item-wrap">
-                  <a href="#modal-07">                        
-                     <img src="images/portfolio/pic7.jpg" alt="披萨">                       
-                     <div class="overlay">
-                      <div class="portfolio-item-meta">
-          					   <h5>披萨</h5>
-                           <p>Branding</p>
-          					</div>
-                     </div>
-                     <div class="link-icon"><i class="fa fa-plus"></i></div>
-                  </a>
-               </div>
-         	</div> <!-- item end -->
+				<div class="bgrid folio-item">
+					<div class="item-wrap">
+						<a href="#modal-07">
+							<img src="images/portfolio/pic7.jpg" alt="披萨">
+							<div class="overlay">
+								<div class="portfolio-item-meta">
+									<h5>披萨</h5>
+									<p>Branding</p>
+								</div>
+							</div>
+							<div class="link-icon"><i class="fa fa-plus"></i></div>
+						</a>
+					</div>
+				</div> <!-- item end -->
 
-            <div class="bgrid folio-item">
-               <div class="item-wrap">
-                  <a href="#modal-08">
-                     <img src="images/portfolio/pic8.jpg" alt="化妆品">
-                     <div class="overlay">
-                      	<div class="portfolio-item-meta">
-        					      <h5>化妆品</h5>
-                           <p>Webdesign</p>
-        					   </div>
-                     </div>
-                     <div class="link-icon"><i class="fa fa-plus"></i></div>                     
-                  </a>
-               </div>
-       		</div>  <!-- item end -->
+				<div class="bgrid folio-item">
+					<div class="item-wrap">
+						<a href="#modal-08">
+							<img src="images/portfolio/pic8.jpg" alt="化妆品">
+							<div class="overlay">
+								<div class="portfolio-item-meta">
+									<h5>化妆品</h5>
+									<p>Webdesign</p>
+								</div>
+							</div>
+							<div class="link-icon"><i class="fa fa-plus"></i></div>
+						</a>
+					</div>
+				</div> <!-- item end -->
 
-         </div> <!-- end portfolio-wrapper -->
-      </div> <!-- end row -->      
-   </section> <!-- end services -->
+			</div> <!-- end portfolio-wrapper -->
+		</div> <!-- end row -->
+	</section> <!-- end services -->
 
 
-   <!-- About Section
+	<!-- About Section
    ================================================== -->
-   <section id="about">
+	<section id="about">
 
-   	<div class="row section-head">
+		<div class="row section-head">
 
-      	<div class="twelve columns">
+			<div class="twelve columns">
 
-      		<h1>Who Are We<span>.</span></h1>
+				<h1>Who Are We<span>.</span></h1>
 
-	         <hr />     	    
+				<hr />
 
-	         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
-	         eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-	         voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-	         </p>
+				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+					totam rem aperiam,
+					eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+					Nemo enim ipsam
+					voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+				</p>
 
-	      </div> <!-- end section-head -->
+			</div> <!-- end section-head -->
 
-      </div>
+		</div>
 
-      <div class="row mobile-no-padding">       	
+		<div class="row mobile-no-padding">
 
-      	<div class="process bgrid-half tab-bgrid-whole group">
+			<div class="process bgrid-half tab-bgrid-whole group">
 
-      		<div class="bgrid">
+				<div class="bgrid">
 
-			      <h3>Our Process.</h3>	
+					<h3>Our Process.</h3>
 
-			      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-			      </p>
+					<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+						totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+						dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+						fugit.
+					</p>
 
-		   	</div>
+				</div>
 
-      		<div class="bgrid">
+				<div class="bgrid">
 
-			     	<h3>Our Approach.</h3>
+					<h3>Our Approach.</h3>
 
-			     	<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-			   	</p>	
+					<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+						totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+						dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+						fugit.
+					</p>
 
-		      </div> 
+				</div>
 
-		      <div class="bgrid">
+				<div class="bgrid">
 
-			     	<h3>Our Goal.</h3>	
+					<h3>Our Goal.</h3>
 
-			     	<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-			      </p>
+					<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+						totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+						dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+						fugit.
+					</p>
 
-		      </div>
+				</div>
 
-		      <div class="bgrid">
+				<div class="bgrid">
 
-			      <h3>Our Mission.</h3>
+					<h3>Our Mission.</h3>
 
-			      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-			      </p>	
+					<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+						totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+						dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+						fugit.
+					</p>
 
-		      </div>
+				</div>
 
-      	</div> <!-- end process -->      	
+			</div> <!-- end process -->
 
-     	</div> <!-- end row -->
+		</div> <!-- end row -->
 
 
- 
 
-      <div id="call-to-action">	       
 
-		   <div class="row section-ads">
+		<div id="call-to-action">
 
-		      <div class="twelve columns">		         		
+			<div class="row section-ads">
 
-			      <h2><a href="http://www.dreamhost.com/r.cgi?287326|STYLESHOUT">Styleshout Recommends Dreamhost<span>.</span></a></h2>
+				<div class="twelve columns">
 
-			      <p>
-			      Looking for an awesome and reliable webhosting? Try <a href="http://www.dreamhost.com/r.cgi?287326|STYLESHOUT"><span>DreamHost</span></a>.
-					Get <span>$50 off</span> when you sign up with the promocode <span>styleshout</span>. 
-					<!-- Simply type	the promocode in the box labeled “Promo Code” when placing your order. -->					
+					<h2><a href="http://www.dreamhost.com/r.cgi?287326|STYLESHOUT">Styleshout Recommends
+							Dreamhost<span>.</span></a></h2>
+
+					<p>
+						Looking for an awesome and reliable webhosting? Try <a
+							href="http://www.dreamhost.com/r.cgi?287326|STYLESHOUT"><span>DreamHost</span></a>.
+						Get <span>$50 off</span> when you sign up with the promocode <span>styleshout</span>.
+						<!-- Simply type	the promocode in the box labeled “Promo Code” when placing your order. -->
 					</p>
 
 					<div class="action">
-			         <a href="http://www.dreamhost.com/r.cgi?287326|STYLESHOUT" >Sign Up Now</a>
-	         	</div>
+						<a href="http://www.dreamhost.com/r.cgi?287326|STYLESHOUT">Sign Up Now</a>
+					</div>
 
-			   </div>
+				</div>
 
-		   </div> <!-- end section-ads -->		         	         
+			</div> <!-- end section-ads -->
 
-	   </div> <!-- end call-to-action -->	           
+		</div> <!-- end call-to-action -->
 
-   </section> <!-- end about -->  
+	</section> <!-- end about -->
 
 
-   <!-- Testimonials Section
+	<!-- Testimonials Section
    ================================================== -->
-   <section id="testimonials">
+	<section id="testimonials">
 
-      <div class="row content flex-container">
-    
-         <div id="testimonial-slider" class="flexslider">
+		<div class="row content flex-container">
 
-            <ul class="slides">
-               <li>
-                  <p>Your work is going to fill a large part of your life, and the only way to be truly satisfied is
-                  to do what you believe is great work. And the only way to do great work is to love what you do.
-                  If you haven't found it yet, keep looking. Don't settle. As with all matters of the heart, you'll know when you find it.
-                  </p>
+			<div id="testimonial-slider" class="flexslider">
 
-                  <div class="testimonial-author">
-                    	<img src="images/avatars/avatar-1.jpg" alt="Author image">
-                    	<div class="author-info">
-                    		Steve Jobs
-                    		<span class="position">CEO, Apple.</span>
-                    	</div>
-                  </div>
-             	</li> <!-- end slide -->
+				<ul class="slides">
+					<li>
+						<p>Your work is going to fill a large part of your life, and the only way to be truly satisfied
+							is
+							to do what you believe is great work. And the only way to do great work is to love what you
+							do.
+							If you haven't found it yet, keep looking. Don't settle. As with all matters of the heart,
+							you'll know when you find it.
+						</p>
 
-               <li>                       
-                  <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
-                  Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem
-                  nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
-                  </p>
-                  <div class="testimonial-author">
-                    	<img src="images/avatars/avatar-2.jpg" alt="Author image">
-                    	<div class="author-info">
-                    		John Doe
-                    		<span>CEO, ABC Corp.</span>
-                    	</div>
-                  </div>                        
-               </li> <!-- end slide -->
+						<div class="testimonial-author">
+							<img src="images/avatars/avatar-1.jpg" alt="Author image">
+							<div class="author-info">
+								Steve Jobs
+								<span class="position">CEO, Apple.</span>
+							</div>
+						</div>
+					</li> <!-- end slide -->
 
-            </ul> <!-- end slides -->
+					<li>
+						<p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+							Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem
+							nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
+						</p>
+						<div class="testimonial-author">
+							<img src="images/avatars/avatar-2.jpg" alt="Author image">
+							<div class="author-info">
+								John Doe
+								<span>CEO, ABC Corp.</span>
+							</div>
+						</div>
+					</li> <!-- end slide -->
 
-         </div> <!-- end flexslider -->         
-        
-      </div> <!-- end row -->
+				</ul> <!-- end slides -->
 
-   </section> <!-- end testimonials section -->  
+			</div> <!-- end flexslider -->
+
+		</div> <!-- end row -->
+
+	</section> <!-- end testimonials section -->
 
 
-   <!-- contact
+	<!-- contact
    ================================================== -->
-   <section id="contact">
+	<section id="contact">
 
-   	<div class="row section-head">
+		<div class="row section-head">
 
-   		<div class="twelve columns">
+			<div class="twelve columns">
 
-	         <h1>Get In Touch With Us<span>.</span></h1>
+				<h1>Get In Touch With Us<span>.</span></h1>
 
-	         <hr />	        
+				<hr />
 
-	      </div>
+			</div>
 
-      </div> <!-- end section-head -->
+		</div> <!-- end section-head -->
 
-     <div class="row team section-head">
+		<div class="row team section-head">
 
-   		<div class="twelve columns">
+			<div class="twelve columns">
 
-	         <h1>用户模型<span>.</span></h1>
+				<h1>用户模型<span>.</span></h1>
 
-	         <hr />	         
+				<hr />
 
-	      </div>
+			</div>
 
-      </div> <!-- end section-head -->
+		</div> <!-- end section-head -->
 
-      <div class="row">
+		<div class="row">
 
-         <div id="team-wrapper" class="bgrid-fourth s-bgrid-third tab-bgrid-half mob-bgrid-whole group">
+			<div id="team-wrapper" class="bgrid-fourth s-bgrid-third tab-bgrid-half mob-bgrid-whole group">
 
-        <div class="bgrid member">
-								
+				<div class="bgrid member">
+
 					<div class="member-pic">
-                 	<img src="images/team/member05-k.jpg" alt=""/>
-                 	<div class="mask"></div>  
-               </div>
-               <div class="member-name">         
-                  <h3>情景一：缺乏尺寸概念的小莫</h3>
-                  <span>27岁 上班族</span>
-               </div>
-               <p>小莫在网上挑选了很多按摩椅，终于选到一个心仪的款式，但把按摩椅放在哪里让小莫犯了难。小莫觉得光凭尺寸数据很难想象出按摩椅的大小，到底要腾出多少空间、收纳多少东西才能放得下按摩椅。小莫打开了秦始皇小程序，扫描了客服提供的产品尺寸图片，并提供了自己的鞋码和身高数据，秦始皇告诉小莫如何用最简单的方式测量按摩椅的尺寸。站立时按摩椅长约五脚，宽约两脚半，高约小莫的从脚底到胯部；平躺时按摩椅长约六脚，宽约两脚半，高约从小莫的脚底到髋部。秦始皇还用简洁的示意图告诉小莫该怎样预留按摩椅的位置。她把自己购买和预估按摩椅尺寸的过程发在了秦始皇生活经验分享区，还附上了自己收纳闲置物品的经验，比如用买袜子的包装盒剪几条缝可以用来收纳充电器、用衣服吊牌喷上香水放在柜子里当香包。在秦始皇小程序中不仅能够得到物品尺寸测算的简单方法，还能够和其他同龄人交流他们的生活经验，得到很多年长者更为高效便捷的建议，秦始皇让她的生活变得更加便捷更加多彩。</p>
-            </div> <!-- end member -->
+						<img src="images/team/member05-k.jpg" alt="" />
+						<div class="mask"></div>
+					</div>
+					<div class="member-name">
+						<h3>情景一：缺乏尺寸概念的小莫</h3>
+						<span>27岁 上班族</span>
+					</div>
+					<p>小莫在网上挑选了很多按摩椅，终于选到一个心仪的款式，但把按摩椅放在哪里让小莫犯了难。小莫觉得光凭尺寸数据很难想象出按摩椅的大小，到底要腾出多少空间、收纳多少东西才能放得下按摩椅。小莫打开了秦始皇小程序，扫描了客服提供的产品尺寸图片，并提供了自己的鞋码和身高数据，秦始皇告诉小莫如何用最简单的方式测量按摩椅的尺寸。站立时按摩椅长约五脚，宽约两脚半，高约小莫的从脚底到胯部；平躺时按摩椅长约六脚，宽约两脚半，高约从小莫的脚底到髋部。秦始皇还用简洁的示意图告诉小莫该怎样预留按摩椅的位置。她把自己购买和预估按摩椅尺寸的过程发在了秦始皇生活经验分享区，还附上了自己收纳闲置物品的经验，比如用买袜子的包装盒剪几条缝可以用来收纳充电器、用衣服吊牌喷上香水放在柜子里当香包。在秦始皇小程序中不仅能够得到物品尺寸测算的简单方法，还能够和其他同龄人交流他们的生活经验，得到很多年长者更为高效便捷的建议，秦始皇让她的生活变得更加便捷更加多彩。
+					</p>
+				</div> <!-- end member -->
 
-         <div class="bgrid member">
-								
+				<div class="bgrid member">
+
 					<div class="member-pic">
-						<img src="images/team/member04-k.jpg" alt=""/>
-                 	<div class="mask"></div>                          	
-               </div>
-               <div class="member-name">
-                  <h3>情景二：充满好奇心的阿杰</h3>
-                  <span>20岁 大学生</span>
-               </div>
+						<img src="images/team/member04-k.jpg" alt="" />
+						<div class="mask"></div>
+					</div>
+					<div class="member-name">
+						<h3>情景二：充满好奇心的阿杰</h3>
+						<span>20岁 大学生</span>
+					</div>
 
-               <p>阿杰是一名充满了好奇心的大学生，某天他正在浏览网页，了解到目前本市日均水量达到了340万立方米左右，城区供水处于高位运行状态如果按照昆明湖200万立方米的容积计算，相当于一天就用掉了1个半昆明湖的水量。阿杰对此产生了好奇，按照新闻报道的方法，1个半昆明湖的水应该是相当庞大的量，可是他仍然不能通过200万立方米的容积想象出这个水量是什么样的概念。阿杰打开了“秦始皇”软件，软件可以自主决定以什么来作为度量单位，阿杰桌上正好有一瓶550毫升的矿泉水，于是他决定以这样一瓶矿泉水为单位，设置好单位后在输入框内输入“200万立方米的水”，“秦始皇”软件很快给出了答案：200万立方米的水相当于36.36亿瓶550毫升的矿泉水，堆积起来有一栋三层小楼那么大。直观的意识到了在炎热的天气下城市用水需求有多么庞大。阿杰觉得这样的换算方式易懂又有趣阿杰不仅收获了乐趣和好奇心，还对尺寸单位有了更深刻的理解，激发了他对未知世界的探索欲望。
- </p>
+					<p>阿杰是一名充满了好奇心的大学生，某天他正在浏览网页，了解到目前本市日均水量达到了340万立方米左右，城区供水处于高位运行状态如果按照昆明湖200万立方米的容积计算，相当于一天就用掉了1个半昆明湖的水量。阿杰对此产生了好奇，按照新闻报道的方法，1个半昆明湖的水应该是相当庞大的量，可是他仍然不能通过200万立方米的容积想象出这个水量是什么样的概念。阿杰打开了“秦始皇”软件，软件可以自主决定以什么来作为度量单位，阿杰桌上正好有一瓶550毫升的矿泉水，于是他决定以这样一瓶矿泉水为单位，设置好单位后在输入框内输入“200万立方米的水”，“秦始皇”软件很快给出了答案：200万立方米的水相当于36.36亿瓶550毫升的矿泉水，堆积起来有一栋三层小楼那么大。直观的意识到了在炎热的天气下城市用水需求有多么庞大。阿杰觉得这样的换算方式易懂又有趣阿杰不仅收获了乐趣和好奇心，还对尺寸单位有了更深刻的理解，激发了他对未知世界的探索欲望。
+					</p>
 
-     			</div> <!-- end member -->
+				</div> <!-- end member -->
 
-            <div class="bgrid member">
-								
+				<div class="bgrid member">
+
 					<div class="member-pic">
-                  <img src="images/team/member03-k.jpg" alt=""/>
-               	<div class="mask"></div>  
-               </div>
-               <div class="member-name">
-                  <h3>情景三：学习新东西的杨先生</h3>
-                  <span>65岁 退休员工</span>
-               </div>
-               <p>杨先生最近在商场活动抽中了一台烤箱，于是决定利用空余时间精进一下厨艺，学习一些简单的烘焙知识。但他却在烘焙菜谱给出的材料用量上犯了难。深耕多年中式炒菜的他对英制单位完全没有概念，需要频繁的用计算器进行换算；对于“一茶匙”等抽象单位，他更是难以把握，经常放错了量，导致烘焙失败。这时，他突然想起了前些天在知乎上看到的网站——秦始皇。打开试用后，他发现网站针对英制和公制换算难的问题，专门提供了一些口诀和经验公式来辅助快速运算，例如把“茶匙”直接转化为公制单位的经验公式。网站还有直接具象化公制单位的换算公式，例如250g奶油大约是多大一碗？九英寸的蛋糕有多大？这些功能极大方便了他的烘焙准备过程，原本需要反复进行的“搜索-计算-记录-备料”的操作被简化为了“搜索-输入数字-备料”，节约了时间和操作步骤。杨先生的烘焙技艺进展神速，他烤的巧克力曲奇受到了家人们和朋友们的一致好评。每当看到他们的笑脸时，他就会想到“秦始皇”对他的巨大帮助。
-</p>
-            </div> <!-- end member -->
+						<img src="images/team/member03-k.jpg" alt="" />
+						<div class="mask"></div>
+					</div>
+					<div class="member-name">
+						<h3>情景三：学习新东西的杨先生</h3>
+						<span>65岁 退休员工</span>
+					</div>
+					<p>杨先生最近在商场活动抽中了一台烤箱，于是决定利用空余时间精进一下厨艺，学习一些简单的烘焙知识。但他却在烘焙菜谱给出的材料用量上犯了难。深耕多年中式炒菜的他对英制单位完全没有概念，需要频繁的用计算器进行换算；对于“一茶匙”等抽象单位，他更是难以把握，经常放错了量，导致烘焙失败。这时，他突然想起了前些天在知乎上看到的网站——秦始皇。打开试用后，他发现网站针对英制和公制换算难的问题，专门提供了一些口诀和经验公式来辅助快速运算，例如把“茶匙”直接转化为公制单位的经验公式。网站还有直接具象化公制单位的换算公式，例如250g奶油大约是多大一碗？九英寸的蛋糕有多大？这些功能极大方便了他的烘焙准备过程，原本需要反复进行的“搜索-计算-记录-备料”的操作被简化为了“搜索-输入数字-备料”，节约了时间和操作步骤。杨先生的烘焙技艺进展神速，他烤的巧克力曲奇受到了家人们和朋友们的一致好评。每当看到他们的笑脸时，他就会想到“秦始皇”对他的巨大帮助。
+					</p>
+				</div> <!-- end member -->
 
-         </div> <!-- end team-wrapper -->
+			</div> <!-- end team-wrapper -->
 
-      </div> <!-- end row -->
+		</div> <!-- end row -->
 
-      <div class="row">
-      	
-      	<div id="contact-form" class="six columns tab-whole left">
+		<div class="row">
 
-            <!-- form -->
-            <form name="contactForm" id="contactForm" method="post" action=""  >
-      			<fieldset>
+			<div id="contact-form" class="six columns tab-whole left">
 
-                  <div class="group">
- 						   <input name="contactName" type="text" id="contactName" placeholder="Name" value="" minLength="2" required />
-                  </div>
-                  <div>
-	      			   <input name="contactEmail" type="email" id="contactEmail" placeholder="Email" value="" required />
-	               </div>
-                  <div>
-	     				   <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject"  value="" />
-	               </div>                       
-                  <div>
-	                 	<textarea name="contactMessage"  id="contactMessage" placeholder="message" rows="10" cols="50" required ></textarea>
-	               </div>                      
-                  <div>
-                     <button class="submitform">Submit</button>
-                     <div id="submit-loader">
-                        <div class="text-loader">Sending...</div>                             
-       				      <div class="s-loader">
-								  	<div class="bounce1"></div>
-								  	<div class="bounce2"></div>
-								  	<div class="bounce3"></div>
+				<!-- form -->
+				<form name="contactForm" id="contactForm" method="post" action="">
+					<fieldset>
+
+						<div class="group">
+							<input name="contactName" type="text" id="contactName" placeholder="Name" value=""
+								minLength="2" required />
+						</div>
+						<div>
+							<input name="contactEmail" type="email" id="contactEmail" placeholder="Email" value=""
+								required />
+						</div>
+						<div>
+							<input name="contactSubject" type="text" id="contactSubject" placeholder="Subject"
+								value="" />
+						</div>
+						<div>
+							<textarea name="contactMessage" id="contactMessage" placeholder="message" rows="10"
+								cols="50" required></textarea>
+						</div>
+						<div>
+							<button class="submitform">Submit</button>
+							<div id="submit-loader">
+								<div class="text-loader">Sending...</div>
+								<div class="s-loader">
+									<div class="bounce1"></div>
+									<div class="bounce2"></div>
+									<div class="bounce3"></div>
 								</div>
 							</div>
-                  </div>
+						</div>
 
-      			</fieldset>
-      		</form> <!-- Form End -->
+					</fieldset>
+				</form> <!-- Form End -->
 
-            <!-- contact-warning -->
-            <div id="message-warning"></div>
-            <!-- contact-success -->
-      		<div id="message-success">
-               <i class="icon-ok"></i>Your message was sent, thank you!<br />
-      		</div>
+				<!-- contact-warning -->
+				<div id="message-warning"></div>
+				<!-- contact-success -->
+				<div id="message-success">
+					<i class="icon-ok"></i>Your message was sent, thank you!<br />
+				</div>
 
-         </div>
+			</div>
 
-         <div class="six columns tab-whole right">
+			<div class="six columns tab-whole right">
 
-            <p class="lead">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+				<p class="lead">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+					laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto
+					beatae vitae dicta sunt explicabo.
 
-	         <h3 class="address">Come Visit</h3>
+				<h3 class="address">Come Visit</h3>
 
-	         <p>
-            1600 Amphitheatre Parkway<br>
-            Mountain View, CA<br>
-            94043 US
-            </p>
+				<p>
+					1600 Amphitheatre Parkway<br>
+					Mountain View, CA<br>
+					94043 US
+				</p>
 
-            <h3>Contact Numbers:</h3>
-			   <p>Phone: (000) 555 1212<br>
-			   	Mobile: (000) 555 0100<br>
-			     	Fax: (000) 555 0101
-			   </p>
-               	
-         </div>     	
+				<h3>Contact Numbers:</h3>
+				<p>Phone: (000) 555 1212<br>
+					Mobile: (000) 555 0100<br>
+					Fax: (000) 555 0101
+				</p>
 
-      </div> <!-- end row -->     
+			</div>
 
-   </section>  <!-- end contact -->
+		</div> <!-- end row -->
+
+	</section> <!-- end contact -->
 
 
-   <!-- Footer
+	<!-- Footer
    ================================================== -->
-   <footer>
+	<footer>
 
-      <div class="row">  
+		<div class="row">
 
-      	<div class="twelve columns content group">
-      	
+			<div class="twelve columns content group">
 
-            <div class="info">
 
-            	<div class="footer-logo"></div>
+				<div class="info">
 
-	            <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
-	            Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem
-	            nibh id elit. 
-	            </p>	        
+					<div class="footer-logo"></div>
 
-	         </div>
+					<p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+						Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem
+						nibh id elit.
+					</p>
 
-      	</div>           
+				</div>
 
-         <ul class="copyright">
-         	<li>&copy; Copyright 2015 KREO.</li> 
-         	<li>Design by <a href="http://www.styleshout.com/">Styleshout.</a>.</li>
-         </ul>
+			</div>
 
-         <div id="go-top">
-            <a class="smoothscroll" title="Back to Top" href="#hero">Back to Top<i class="fa fa-angle-up"></i></a>
-         </div>
+			<ul class="copyright">
+				<li>&copy; Copyright 2015 KREO.</li>
+				<li>Design by <a href="http://www.styleshout.com/">Styleshout.</a>.</li>
+			</ul>
 
-      </div> <!-- end row -->
+			<div id="go-top">
+				<a class="smoothscroll" title="Back to Top" href="#hero">Back to Top<i class="fa fa-angle-up"></i></a>
+			</div>
 
-   </footer> <!-- end footer -->
+		</div> <!-- end row -->
 
-   <div id="preloader"> 
-    	<div id="loader"></div>
-   </div> 
+	</footer> <!-- end footer -->
 
-   <!-- Java Script
-   ================================================== --> 
-   <script src="js/jquery-1.11.3.min.js"></script>
-   <script src="js/jquery-migrate-1.2.1.min.js"></script>
-   <script src="js/jquery.flexslider-min.js"></script>
-   <script src="js/jquery.waypoints.min.js"></script>
-   <script src="js/jquery.validate.min.js"></script>
-   <script src="js/jquery.fittext.js"></script>
-   <script src="js/jquery.placeholder.min.js"></script>
-   <script src="js/jquery.magnific-popup.min.js"></script>  
-   <script src="js/main.js"></script>
+	<div id="preloader">
+		<div id="loader"></div>
+	</div>
+
+	<!-- Java Script
+   ================================================== -->
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/jquery-migrate-1.2.1.min.js"></script>
+	<script src="js/jquery.flexslider-min.js"></script>
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/jquery.validate.min.js"></script>
+	<script src="js/jquery.fittext.js"></script>
+	<script src="js/jquery.placeholder.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/main.js"></script>
 
 </body>
 
