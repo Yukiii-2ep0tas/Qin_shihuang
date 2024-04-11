@@ -65,7 +65,7 @@
 	      controlNav: true,
 	      directionNav: false,
 	      smoothHeight: true,
-	      slideshowSpeed: 999999,
+	      slideshowSpeed: 7000,
 	      animationSpeed: 600,
 	      randomize: false,
 	   });
@@ -76,7 +76,7 @@
    /*----------------------------------------------------*/
 	/* Adjust Primary Navigation Background Opacity
 	------------------------------------------------------*/
-   $(window).on('scroll', function() {
+   $(window).off('scroll', function() {
 
 		var h = $('header').height();
 		var y = $(window).scrollTop();
