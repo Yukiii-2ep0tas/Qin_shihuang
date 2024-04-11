@@ -74,7 +74,7 @@ h4,
 h5,
 h6 {
 	font-family: "raleway-heavy", sans-serif;
-	color: #FFFFFF;
+	color: #292c73;
 	font-style: normal;
 	text-rendering: optimizeLegibility;
 	margin: 18px 0 15px;
@@ -639,7 +639,7 @@ header {
 	
 }
 header.opaque {
-	background: #faf8ed;
+	background: #292c73;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -971,9 +971,9 @@ ul#nav li.current a:after {
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
-	min-height: 630px;
+	min-height: 500px;
 	width: 100%;
-	text-align: left;
+	text-align: center;
 	position: relative;
 
 }
@@ -998,28 +998,9 @@ ul#nav li.current a:after {
 		letter-spacing: 0px; 
 		padding-bottom: 24px;
 		color: #292c73;
+		margin:0 auto;
 		position: relative;
 	}
-
-	/* for css animations */
-	filter: alpha(opacity=0);
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-	opacity: 0;
-	zoom: 1;
-}
-
-#hero-slider .slides .flex-caption h1::after {  
-	display: block;  
-	background-color: #D577D8;  
-	width: 150px;  
-	height: 3px;  
-	content: '';  
-	position: relative;  
-	transform: translateX(-50%);    
-	transform-origin: 0 0;  
-	bottom: -20px;  
-  }  
-	
 
 
 
@@ -1312,7 +1293,7 @@ ul#nav li.current a:after {
 /* media queries - portfolio */
 
 @media only screen and (max-width:1300px) {
-	#portfolio .row.items {
+	#portfolio .items {
 		width: 100%;
 		padding: 0;
 	}
@@ -1320,7 +1301,7 @@ ul#nav li.current a:after {
 	#portfolio .row.items .columns {
 		padding: 0;
 	}
-
+	
 }
 
 /* portfolio content */
@@ -1660,10 +1641,12 @@ ul#nav li.current a:after {
 /* =================================================================== */
 
 #services {
-	background-image: url ;
-	padding-top: 120px;
-	padding-bottom: 120px;
-	border-bottom: 1px solid #15191d;
+	background: transparent url(../images/bg2.jpg) repeat-y;
+	background-size: auto 100%; /* 保持背景图片在水平方向上的原始比例，垂直方向上填满 */
+	width: 100%;
+	position: left;
+	padding-bottom: 20px;
+	-webkit-text-fill-color: #292c73;
 }
 
 .service-list {
