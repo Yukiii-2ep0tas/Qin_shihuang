@@ -40,7 +40,7 @@
     /* 其他样式，如宽度、背景色等 */
     width: 100%;           /* 容器宽度设置为100% */
     flex-direction: column;
-    min-height: 100vh;
+    height:100vh;
   }
 #input_area {
     position: relative;
@@ -84,6 +84,10 @@
 
 }
 
+.numpad_area.folded {
+  display: none;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -107,8 +111,8 @@ body {
 
 .toggle-button{
   cursor: pointer;
-  width: 24px;
-  height: 24px;
+  width: 48px;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -131,7 +135,7 @@ body {
 .user-info {
   display: flex;
   align-items: center;
-  padding: 5px;
+  padding: 10%;
 }
 
 .user-info img {
@@ -143,19 +147,22 @@ body {
 
 .username {
   font-size: 16px;
+  color: black;
 }
 
 .options {
-  list-style: none;
+  display: flex;
+  flex-direction: column;
   padding: 0;
-  margin: 10px 0;
+  margin: 0;
 }
 
 .option {
   display: flex;
   align-items: center;
-  padding: 10%;
+  padding: 25%;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .option img {
@@ -164,9 +171,18 @@ body {
   margin-right: 5px;
 }
 
+.option .option_text {
+  display: none;
+  color: black;
+  padding: 10px;
+}
+
 /* 展开侧边栏时的样式 */
 .sidebar.expanded {
   width: 200px; /* 展开后的宽度 */
 }
 
+.sidebar.expanded .option .option_text {
+  display: inline; /* 显示选项文本 */
+}
 
