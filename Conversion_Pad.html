@@ -4,24 +4,27 @@
 </head>
 <body>
     <div style="display: flex; flex-direction: row;">
-        <div class="side_panel" style="display: flex;flex-direction: column;">
-            <div class="user">
-                <img src="images/avatars/avatar-1.jpg">
-                <span>Jakie Ma</span>
-            </div>
-            <div class="functions">
-                <div>
-                    重量转化
+        <div class="container">
+            <div class="toggle-button">☰</div>
+            <div class="sidebar">
+                <div class="user-info">
+                    <img src="images/avatars/avatar-1.jpg" alt="User Avatar">
+                    <span class="username">Jakie Ma</span>
                 </div>
-                <div>
-                    尺寸转化
-                </div>
-                <div>
-                    个数转化
-                </div>
-                <div>
-                    兴趣社区
-                </div>
+                <ul class="options">
+                    <li class="option" data-name="重量转换">
+                        <img src="images/icons/Up.svg" alt="重量转换">
+                    </li>
+                    <li class="option" data-name="个数转换">
+                        <img src="images/icons/Down.svg" alt="个数转换">
+                    </li>
+                    <li class="option" data-name="尺寸转换">
+                        <img src="images/icons/Right.svg" alt="尺寸转换">
+                    </li>
+                    <li class="option" data-name="兴趣社区">
+                        <img src="images/icons/Community.svg" alt="兴趣社区">
+                    </li>
+                </ul>
             </div>
         </div>
 
@@ -110,9 +113,38 @@
         var content = document.getElementById('output_search_panel');
         content.style.display = content.style.display === 'none' ? 'block' : 'none';
     }
-    function switch_to_input_area(){
-        
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+    const toggleButton = document.querySelector('.toggle-button');
+    const sidebar = document.querySelector('.sidebar');
+    const options = document.querySelectorAll('.option');
+
+    // 展开侧边栏
+    function expandSidebar() {
+        sidebar.classList.add('expanded');
+        options.forEach(option => {
+            option.style.opacity = '1';
+        });
     }
+
+    // 收起侧边栏
+    function collapseSidebar() {
+        sidebar.classList.remove('expanded');
+        options.forEach(option => {
+            option.style.opacity = '0';
+        });
+    }
+
+    // 切换侧边栏状态
+    toggleButton.addEventListener('click', function() {
+        if (sidebar.classList.contains('expanded')) {
+            collapseSidebar();
+        } else {
+            expandSidebar();
+        }
+    });
+});
     // 监听来自iframe的消息
     window.addEventListener('message', function(event) {
         // 检查消息的来源和数据结构
