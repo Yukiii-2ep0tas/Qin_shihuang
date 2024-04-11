@@ -92,8 +92,30 @@
 }
 
 .side_panel{
-  width: 40%;
+  width: 79%;
   padding: 1%;
 }
 
+.user{
+  background-color:rgba(0,0,0,0.2);
+  height: 15%;
+}
+
+.user span{
+  font-size: 100%;
+  position: relative;
+  left: 25%;
+  bottom: 5%;
+}
+
+.user img{
+  border-radius: 50%;
+  width: 30%;
+  position: relative;
+  left: 5%;
+  top: 20%
+}
+.functions div{
+  
+}
 
