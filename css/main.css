@@ -1231,7 +1231,7 @@ ul#nav li.current a:after {
 #hero #more {
 	position: absolute;
 	left: 50%;
-	bottom: -27px;
+	bottom: 30px;
 	margin-left: 250px;
 }
 
@@ -1883,7 +1883,7 @@ ul#nav li.current a:after {
 /* =================================================================== */
 
 #testimonials {
-	background: #D577D8;
+	background: #72D2E3;
 	padding-top: 90px;
 	padding-bottom: 112px;
 	position: relative;
@@ -1906,7 +1906,7 @@ ul#nav li.current a:after {
 }
 
 #testimonial-slider p {
-	font: 27px/1.9 "merriweather-regular", sans-serif;
+	font: 15px "merriweather-regular", sans-serif;
 	color: #FFFFFF;
 	padding: 0;
 	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
@@ -1917,7 +1917,6 @@ ul#nav li.current a:after {
 	font: 16px/24px "raleway-heavy", sans-serif;
 	letter-spacing: 2px;
 	text-transform: uppercase;
-	margin-top: 24px;
 	color: #FFFFFF;
 }
 
@@ -1990,7 +1989,7 @@ ul#nav li.current a:after {
 	}
 
 	#testimonial-slider p {
-		font: 25px/1.9 "merriweather-regular", sans-serif;
+		font: 15px "merriweather-regular", sans-serif;
 	}
 
 }
@@ -2001,7 +2000,7 @@ ul#nav li.current a:after {
 	}
 
 	#testimonial-slider p {
-		font: 22px/1.9 "merriweather-regular", sans-serif;
+		font: 15px "merriweather-regular", sans-serif;
 	}
 
 }
@@ -2012,7 +2011,7 @@ ul#nav li.current a:after {
 	}
 
 	#testimonial-slider p {
-		font: 20px/1.9 "merriweather-regular", sans-serif;
+		font: 15px "merriweather-regular", sans-serif;
 	}
 
 	#testimonial-slider .testimonial-author {
@@ -2037,7 +2036,7 @@ ul#nav li.current a:after {
 	}
 
 	#testimonial-slider p {
-		font: 18px/1.9 "merriweather-regular", sans-serif;
+		font: 15px "merriweather-regular", sans-serif;
 	}
 
 }
