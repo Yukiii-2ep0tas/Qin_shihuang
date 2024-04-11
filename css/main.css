@@ -1293,7 +1293,7 @@ ul#nav li.current a:after {
 /* media queries - portfolio */
 
 @media only screen and (max-width:1300px) {
-	#portfolio .row.items {
+	#portfolio .items {
 		width: 100%;
 		padding: 0;
 	}
@@ -1301,7 +1301,7 @@ ul#nav li.current a:after {
 	#portfolio .row.items .columns {
 		padding: 0;
 	}
-
+	
 }
 
 /* portfolio content */
