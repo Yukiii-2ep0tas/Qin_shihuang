@@ -7,24 +7,28 @@
         <div class="container">
             <div class="sidebar">
                 <div class="toggle-button" id="toggleButton">
-                    <img src="images/icons/Right.svg" alt="Toggle Button" />
+                    <img src="images/icons/Right.svg" alt="Toggle Button" style="width: 25px;" />
                 </div>
                 <div class="user-info">
                     <img src="images/avatars/avatar-1.jpg" alt="User Avatar">
                     <span class="username">Jakie Ma</span>
                 </div>
                 <div class="options">
-                    <div class="option" data-name="重量转换">
+                    <div class="option">
                         <img src="images/icons/Up.svg" alt="重量转换">
+                        <div class="option_text">重量转换</div>
                     </div>
-                    <div class="option" data-name="个数转换">
+                    <div class="option">
                         <img src="images/icons/Down.svg" alt="个数转换">
+                        <div class="option_text">个数转换</div>
                     </div>
-                    <div class="option" data-name="尺寸转换">
+                    <div class="option">
                         <img src="images/icons/Right.svg" alt="尺寸转换">
+                        <div class="option_text">尺寸转换</div>
                     </div>
-                    <div class="option" data-name="兴趣社区">
+                    <div class="option">
                         <img src="images/icons/Community.svg" alt="兴趣社区">
+                        <div class="option_text">兴趣社区</div>
                     </div>
                 </div>
             </div>
@@ -129,7 +133,7 @@
     // 收起侧边栏并重置图标
     function collapseSidebar() {
         sidebar.classList.remove('expanded');
-        toggleButton.style.animation = 'rotate 0.3s forwards';
+        toggleButton.style.animation = 'rotate 0.3s reverse';
     }
 
     // 切换侧边栏状态
