@@ -967,7 +967,7 @@ ul#nav li.current a:after {
 /* =================================================================== */
 
 #hero {
-	background: #0F1215 url(../images/hero-bg.jpg) no-repeat center;
+	background: #0F1215 url(../images/bg.jpg) no-repeat center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
@@ -994,13 +994,12 @@ ul#nav li.current a:after {
 }
 
 #hero-slider .slides .flex-caption h1 {
-	font: 49px/1.3 "raleway-bold", sans-serif;
-	letter-spacing: -1px;
-	padding-bottom: 24px;
-	color: white;
-	text-shadow: 0 1px 20px rgba(0, 0, 0, 0.6);
-	position: relative; 
-	left: -20%;   
+		font: bold 100/1.3 "raleway-bold", sans-serif; 
+		letter-spacing: 0px; 
+		padding-bottom: 24px;
+		color: #292c73;
+		position: relative;
+	}
 
 	/* for css animations */
 	filter: alpha(opacity=0);
@@ -1021,6 +1020,8 @@ ul#nav li.current a:after {
 	bottom: -20px;  
   }  
 	
+
+
 
 #hero-slider .slides .caption h3 {
 	font: 18px/1.9 "merriweather-light", sans-serif;
@@ -1515,7 +1516,7 @@ ul#nav li.current a:after {
 
 .popup-modal .description-box h4 {
 	font: 15px/24px "raleway-heavy", sans-serif;
-	color: #000000;
+	color: 11111;
 }
 
 .popup-modal .description-box p {
@@ -1659,7 +1660,7 @@ ul#nav li.current a:after {
 /* =================================================================== */
 
 #services {
-	background: #12151B;
+	background-image: url ;
 	padding-top: 120px;
 	padding-bottom: 120px;
 	border-bottom: 1px solid #15191d;
