@@ -41,7 +41,6 @@
     width: 100%;           /* 容器宽度设置为100% */
     flex-direction: column;
     min-height: 100vh;
-    padding: 1%;
   }
 #input_area {
     position: relative;
@@ -92,26 +91,47 @@ body {
 
 .container {
   display: flex;
-  height: 100vh;
   flex-direction: column;
 }
 
 .sidebar {
   display: flex;
   flex-direction: column;
-  width: 100px;
+  width: 50px;
+  height: 100vh;
   background-color: rgba(0,0,0,0.1);
   color: white;
   transition: width 0.3s;
   overflow: hidden;
 }
-.toggel-button{
-  position: relative;
+
+.toggle-button{
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s;
 }
+
+@keyframes rotate {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(180deg);
+  }
+}
+
+.sidebar.expanded + .toggle-button {
+  animation: rotate 0.3s forwards;
+}
+
 .user-info {
   display: flex;
   align-items: center;
-  padding: 10px;
+  padding: 5px;
 }
 
 .user-info img {
