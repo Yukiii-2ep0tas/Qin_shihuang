@@ -99,6 +99,7 @@ h1 {
 h2 {
 	font-size: 24px;
 	line-height: 30px;
+	colour:#292c73;
 }
 
 h3 {
@@ -736,7 +737,6 @@ header .header-social li a:hover {
 /* nav-wrap */
 #nav-wrap {
 	font: 13px "raleway-heavy", sans-serif;
-	text-transform: uppercase;
 	letter-spacing: 1.5px;
 	float: left;  
 }
@@ -883,7 +883,7 @@ ul#nav li.current a:after {
 
 	/* dropdown nav */
 	#nav-wrap ul#nav {
-		background: #1c212a;
+		background:#292c73;
 		padding: 54px 45px 60px 45px;
 		margin: 0;
 		height: auto;
@@ -924,7 +924,7 @@ ul#nav li.current a:after {
 	}
 
 	#nav-wrap ul#nav li.current > a {
-		background: none;
+		background-color: none;
 		color: #D577D8;
 	}
 
@@ -996,32 +996,11 @@ ul#nav li.current a:after {
 #hero-slider .slides .flex-caption h1 {
 		font: bold 100/1.3 "raleway-bold", sans-serif; 
 		letter-spacing: 0px; 
-		padding-bottom: 24px;
+		padding-bottom: 0px;
 		color: #292c73;
 		position: relative;
+		text-align: center;
 	}
-
-	/* for css animations */
-	filter: alpha(opacity=0);
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-	opacity: 0;
-	zoom: 1;
-}
-
-#hero-slider .slides .flex-caption h1::after {  
-	display: block;  
-	background-color: #D577D8;  
-	width: 150px;  
-	height: 3px;  
-	content: '';  
-	position: relative;  
-	transform: translateX(-50%);    
-	transform-origin: 0 0;  
-	bottom: -20px;  
-  }  
-	
-
-
 
 #hero-slider .slides .caption h3 {
 	font: 18px/1.9 "merriweather-light", sans-serif;
@@ -1060,20 +1039,7 @@ ul#nav li.current a:after {
 	zoom: 1;
 }
 
-/* media queries:  
-/* #hero / .hero-contert / #hero-slider */
 
-@media only screen and (max-width:1200px) {
-	#hero-slider .slides .flex-caption h1 {
-		font: 44px/1.3 "raleway-bold", sans-serif;
-	}
-
-}
-
-@media only screen and (max-width:1024px) {
-	.hero-content {
-		padding-bottom: 90px;
-	}
 
 	#hero-slider {
 		text-align: center;
@@ -1101,8 +1067,6 @@ ul#nav li.current a:after {
 		margin-left: auto;
 		margin-right: auto;
 	}
-
-}
 
 @media only screen and (max-width:768px) {
 	#hero {
