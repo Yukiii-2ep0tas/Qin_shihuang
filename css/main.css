@@ -999,7 +999,8 @@ ul#nav li.current a:after {
 	padding-bottom: 24px;
 	color: white;
 	text-shadow: 0 1px 20px rgba(0, 0, 0, 0.6);
-	position: relative;    
+	position: relative; 
+	left: -20%;   
 
 	/* for css animations */
 	filter: alpha(opacity=0);
@@ -1008,23 +1009,27 @@ ul#nav li.current a:after {
 	zoom: 1;
 }
 
-#hero-slider .slides .flex-caption h1::after {
-	display: block;
-	background-color: #D577D8;
-	width: 100px;
-	height: 3px;
-	content: '\0020';
-	position: absolute;
-	left: 0;
-	bottom: 0;
-}
+#hero-slider .slides .flex-caption h1::after {  
+	display: block;  
+	background-color: #D577D8;  
+	width: 150px;  
+	height: 3px;  
+	content: '';  
+	position: relative;  
+	transform: translateX(-50%);    
+	transform-origin: 0 0;  
+	bottom: -20px;  
+  }  
+	
 
-#hero-slider .slides .flex-caption h3 {
+#hero-slider .slides .caption h3 {
 	font: 18px/1.9 "merriweather-light", sans-serif;
 	color: rgba(255, 255, 255, 0.7);
 	text-shadow: 0 1px 15px rgba(0, 0, 0, 0.5);
 	width: 85%;
-	margin-top: 24px;    
+	margin-top: 24px;
+	
+	
 
 	/* for css animations */
 	filter: alpha(opacity=0);
@@ -1794,6 +1799,7 @@ ul#nav li.current a:after {
 	margin-left: auto;
 	margin-right: auto;
 	width: 80%;
+	
 }
 
 #call-to-action p {
