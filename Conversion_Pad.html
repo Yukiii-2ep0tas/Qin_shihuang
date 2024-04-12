@@ -3,7 +3,7 @@
     <link rel="stylesheet" href="css/conversion_pad_style.css">
 </head>
 <body>
-    <div style="display: flex; flex-direction: row;">
+    <div id='main_container'>
         <div class="container">
             <div class="sidebar">
                 <div class="toggle-button" id="toggleButton">
@@ -30,6 +30,10 @@
                         <img src="images/icons/Community.svg" alt="兴趣社区">
                         <div class="option_text">兴趣社区</div>
                     </div>
+                    <div class="option" id="numpad_exp_fold" onclick="exp_fold_numpad()">
+                        <img src="images/icons/numpad.svg" alt="收起/展开数字键盘">
+                        <div class="option_text">收起/展开数字键盘</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -37,25 +41,25 @@
         <div class="center-div">
             <div id="input_area" onclick="switch_to_input_area()">
                 <div class="search_bar" onclick="toggle_input_search_panel()">
-                    <div style="color: white;font-size: 75%;position: relative;left: 27%;top: 30%">搜索</div>
+                    <div style="color: black;font-size: 75%;position: relative;left: 27%;top: 27%">搜索</div>
                 </div>
-                <div id="input_display" style="position: absolute; left:95%; top: 75%; transform: translate(-100%,-50%);font-size: 40px; text-align: right; color: aliceblue;"></div>
-                <div id="input_item_name" style="position: relative;left: 5%; top:20%;font-size: 40px;text-align: left;color: aliceblue;"></div>
+                <div id="input_display" style="position: absolute; left:95%; top: 75%; transform: translate(-100%,-50%);font-size: 40px; text-align: right; color: black;"></div>
+                <div id="input_item_name" style="position: relative;left: 5%; top:20%;font-size: 40px;text-align: left;color: black;"></div>
                 <div id="input_search_panel" class="embedded-content">
                     <iframe src="Search_Panel.html" frameborder="0" width="100%" height="100%"></iframe>
                 </div>
             </div>
             <div id="output_area">
                 <div class="search_bar"  onclick="toggle_output_search_panel()">
-                    <div style="color: white;font-size: 75%;position: relative;left: 27%;top:30%">搜索<span>▽</span></div>
+                    <div style="color: black;font-size: 75%;position: relative;left: 27%;top:27%">搜索</div>
                 </div>
-                <div id="result_display" style="position: absolute; left:95%; top: 75%; transform: translate(-100%,-50%);font-size: 40px; text-align: right; color: aliceblue;"></div>
-                <div id="output_item_name" style="position: relative; left: 5%; top:20%;font-size: 40px;text-align: left;color: aliceblue;"></div>
+                <div id="result_display" style="position: absolute; left:95%; top: 75%; transform: translate(-100%,-50%);font-size: 40px; text-align: right; color: black;"></div>
+                <div id="output_item_name" style="position: relative; left: 5%; top:20%;font-size: 40px;text-align: left;color: black;"></div>
                 <div id="output_search_panel" class="embedded-content">
                     <iframe src="Search_Panel.html" frameborder="0" width="100%" height="100%"></iframe>
                 </div>
             </div>
-            <div class="numpad_area">
+            <div class="numpad_area" id="numpad_area">
                 <div onclick="input(1)">1</div>
                 <div onclick="input(2)">2</div>
                 <div onclick="input(3)">3</div>
@@ -119,6 +123,20 @@
         var content = document.getElementById('output_search_panel');
         content.style.display = content.style.display === 'none' ? 'block' : 'none';
     }
+
+
+    var keyboard = document.getElementById('numpad_area');
+    var toggleButton = document.getElementById('numpad_exp_fold');
+
+  // 监听按钮点击事件
+    toggleButton.addEventListener('click', function() {
+    // 切换键盘的类，以控制显示和隐藏
+    if (keyboard.classList.contains('expanded')) {
+      keyboard.classList.remove('expanded');
+    } else {
+      keyboard.classList.add('expanded');
+    }
+  });
 
     document.addEventListener('DOMContentLoaded', function() {
     const sidebar = document.querySelector('.sidebar');

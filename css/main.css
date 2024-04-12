@@ -645,10 +645,10 @@ header.opaque {
 
 /* header logo */
 header .logo {
-	background: #D577D8;
+	background: #5f9ffa;
 	float: left;
 	width: auto;
-	margin-left: 15px;
+	margin-left:0;
 	margin-right: 30px;
 	z-index: 600;    
 	
@@ -771,7 +771,7 @@ ul#nav li a {
 	line-height: 38px;
 	text-decoration: none;
 	text-align: left;
-	color: #FFFFFF;
+	color: #000000;
 	position: relative;
 	-moz-transition: color 0.2s ease-in-out;
 	-o-transition: color 0.2s ease-in-out;
@@ -781,7 +781,7 @@ ul#nav li a {
 }
 
 ul#nav li a:hover {
-	color: #D577D8;
+	color: #5f9ffa;
 }
 
 ul#nav li a:active {
@@ -789,7 +789,7 @@ ul#nav li a:active {
 }
 
 ul#nav li.current a {
-	color: #D577D8;
+	color: #5f9ffa;
 }
 
 ul#nav li.current a:after {
