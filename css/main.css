@@ -585,7 +585,11 @@ hr {
 	width: 120px;
 	text-align: left;
 }
-
+@media only screen and (max-width:1024px) {
+	.section-head h1 + hr {
+		margin-right: 18px;
+	}
+}
 @media only screen and (max-width:768px) {
 	.section-head {
 		text-align: center;
@@ -1903,6 +1907,7 @@ ul#nav li.current a:after {
 	margin: 0 0 30px 0px;
 	padding-left: 0;
 	position: relative;
+	text-align: justify;
 }
 
 #testimonial-slider p {
@@ -1998,7 +2003,7 @@ ul#nav li.current a:after {
 	#testimonials .flex-container {
 		width: 90%;
 	}
-
+	#testimonials 
 	#testimonial-slider p {
 		font: 15px "merriweather-regular", sans-serif;
 	}
