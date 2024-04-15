@@ -136,7 +136,7 @@ p img {
 }
 
 p.lead {
-	font: 20px/36px "merriweather-light", serif;
+	font: 20px/30px "merriweather-light", serif;
 	color: #707273;
 }
 
@@ -1670,6 +1670,53 @@ ul#nav li.current a:after {
 	background: rgba(0, 0, 0, 0.1);
 }
 
+/* more link */
+#services #next {
+	position: relative;
+	text-align: center;
+	top: 20px;
+	bottom: 50px;
+}
+
+#services #next a {
+	font: 20px/54px "raleway-heavy", sans-serif;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	text-decoration: none;
+	display: block;
+	height: 54px;
+	width: 200px;
+	border-radius: 0px;
+	background: #99D9EA;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+	color: #FFFFFF;
+	-moz-transition: all 0.4s ease-on-out;
+	-o-transition: all 0.4s ease-on-out;
+	-webkit-transition: all 0.4s ease-on-out;
+	-ms-transition: all 0.4s ease-on-out;
+	transition: all 0.4s ease-on-out;
+}
+
+#services #next  a:hover {
+	background: #328ba1;
+	color: #000000;
+}
+
+#services #next  a i {
+	margin-left: 6px;
+	position: relative;
+	right: -5px;
+}
+
+/* media queries - #more */
+@media only screen and (max-width:1024px) {
+	#hero #more {
+		margin-left: -100px;
+	}
+
+}
+
 @media only screen and (max-width:600px) {
 	.service-list .bgrid:hover {
 		background: inherit;
@@ -2092,7 +2139,7 @@ ul#nav li.current a:after {
 	}
 
 	#contact .right p.lead {
-		font: 18px/36px "merriweather-light", serif;
+		font: 15x/26px "merriweather-light", serif;
 	}
 
 }
@@ -2524,7 +2571,6 @@ footer .social-links li:first-child {
 @media only screen and (max-width:1024px) {
 	#team-wrapper .member-social li {
 		margin-right: 10px;
-		background-color: #a6ebe7;
 		padding: 15px; 
 	}
 	#team-wrapper .member p {
@@ -2537,6 +2583,7 @@ footer .social-links li:first-child {
 	#team-wrapper .member p {
 		font-size: 14px;
 		line-height: 27px;
+		color: #000;
 	
 	}
 
@@ -2550,22 +2597,26 @@ footer .social-links li:first-child {
 		margin-right: 30px;
 		position: relative;
 		top: 6px;
+		color: #000;
 
 	}
 
 	#team-wrapper .member-pic .mask {
 		display: none;
+		color: #000;
 	}
 
 	#team-wrapper .member-name + p {
 		clear: both;
 		margin-top: 30px;
+		color: #000;
 	
 	}
 
 	#team-wrapper .member p {
 		font-size: 16px;
 		line-height: 30px;
+		color: #000;
 	
 	}
 
