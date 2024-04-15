@@ -76,7 +76,7 @@
    /*----------------------------------------------------*/
 	/* Adjust Primary Navigation Background Opacity
 	------------------------------------------------------*/
-   $(window).off('scroll', function() {
+	$(window).off('scroll', function() {
 
 		var h = $('header').height();
 		var y = $(window).scrollTop();
