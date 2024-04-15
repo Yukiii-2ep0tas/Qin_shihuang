@@ -99,9 +99,13 @@
   position: relative;
   left: 5%;
   top: 10%;
+  min-width: 450px;
   z-index: 1000;
 }
 
+.embedded-content > iframe {
+  border-radius: 20px;
+}
 
 .numpad_area > div:nth-child(4),
 .numpad_area > div:nth-child(8),

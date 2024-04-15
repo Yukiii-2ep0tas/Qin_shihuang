@@ -8,30 +8,65 @@
         <div class="select_area">
             <div class="category_area">
                 <!-- 分类标签 -->
-                <div class="category_item" data-category="all">烹饪</div>
-                <div class="category_item" data-category="books">家居</div>
-                <div class="category_item" data-category="electronics">体积</div>
-                <div class="category_item" data-category="clothing">世界</div>
-                <div class="category_item" data-category="toys">探索</div>
+                <div class="category_item" data-category="cooking" onclick="updateItemsGrid(this)">烹饪</div>
+                <div class="category_item" data-category="furniture" onclick="updateItemsGrid(this)">家居</div>
+                <div class="category_item" data-category="volumn" onclick="updateItemsGrid(this)">体积</div>
+                <div class="category_item" data-category="environment" onclick="updateItemsGrid(this)">世界</div>
+                <div class="category_item" data-category="explore" onclick="updateItemsGrid(this)">探索</div>
             </div>
-            <div class="items-grid">
-                <!-- 物品展示区域 -->
-                <div class="item" onclick="toggle_conversion('茶匙')">茶匙</div>
-                <div class="item" onclick="toggle_conversion('盎司')">盎司</div>
-                <div class="item">Item 3</div>
-                <div class="item">Item 4</div>
-                <div class="item">Item 5</div>
-                <div class="item">Item 6</div>
-                <div class="item">Item 7</div>
-                <div class="item">Item 8</div>
-                <!-- 更多物品... -->
-            </div>
+            <div class="items-grid" id="itemsGrid"></div>
         </div>
     </div>
 </body>
 
 <script>
+    var itemsData = {
+            cooking: ['茶匙', '盎司'],
+            furniture: ['单人沙发','双开门冰箱'],
+            volumn: ['1立方米'],
+            environment: [['昆明湖',2000000]],
+            explore: ['一百万人民币']
+        };
     function toggle_conversion(itemText){
         window.parent.postMessage({action: 'update_input_item_name', text: itemText}, '*')
     }
+
+    function initItemsGrid() {
+            updateItemsGrid();
+        }
+
+    function updateItemsGrid(categoryItem) {
+        var itemsGrid = document.getElementById('itemsGrid');
+        itemsGrid.innerHTML = ''; // 清空当前物品列表
+
+        // 获取选中的分类
+        var selectedCategory = categoryItem ? categoryItem.getAttribute('data-category') : 'all';
+        var items = itemsData[selectedCategory];
+
+        // 动态生成并添加物品到物品列表
+        items.forEach(function(item) {
+            var itemDiv = document.createElement('div');
+            itemDiv.className = 'item';
+            itemDiv.textContent = item;
+            itemsGrid.appendChild(itemDiv);
+        });
+        }
+
+        // 绑定分类标签的点击事件
+        function bindCategoryClickEvents() {
+            var categoryItems = document.querySelectorAll('.category_item');
+            categoryItems.forEach(function(item) {
+                item.addEventListener('click', function() {
+                    // 避免重复绑定事件
+                    item.removeEventListener('click', updateItemsGrid);
+                    updateItemsGrid(this);
+                });
+            });
+        }
+
+        // 页面加载完成后执行初始化和事件绑定
+        window.onload = function() {
+            initItemsGrid();
+            bindCategoryClickEvents();
+        };
 </script>
