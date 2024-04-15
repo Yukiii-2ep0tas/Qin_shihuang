@@ -1,181 +1,112 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Searchable Collapsible Search Box with Smooth Transition</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-  }
-
-  .search-box {
-    display: flex;
-    align-items: center;
-    transition: all 0.3s ease;
-  }
-
-  .search-box.collapsed {
-    flex-direction: column;
-    height: 40px; /* 输入框和按钮的高度 */
-  }
-
-  .search-box.expanded {
-    height: 200px; /* 根据需要调整高度 */
-  }
-
-  .search-input {
-    flex: 1;
-    margin: 10px;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-  }
-
-  .search-button {
-    padding: 5px 15px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-  }
-
-  .search-button:hover {
-    background-color: #0056b3;
-  }
-
-  .category-options {
-    overflow-y: auto;
-    max-height: 100px; /* 根据需要调整 */
-  }
-
-  .items-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-    gap: 10px;
-  }
-
-  .item {
-    text-align: center;
-    padding: 5px;
-    border: 1px solid #ddd;
-  }
-
-  .item img {
-    max-width: 100%;
-    height: auto;
-  }
-</style>
-</head>
-<body>
-
-<div class="search-box" id="searchBox">
-  <input type="text" class="search-input" id="searchInput" placeholder="Search items...">
-  <button class="search-button" id="toggleButton">Search</button>
-  <div class="category-options" id="categoryOptions">
-    <!-- 品类选项将在这里动态生成 -->
-  </div>
-  <div class="items-grid" id="itemsGrid">
-    <!-- 物品网格内容动态生成 -->
-  </div>
-</div>
-
-<script>
-  // 模拟物品数据
-  var items = {
-    'Electronics': [
-      { name: 'Smartphone', params: ['A1', 'B1', 'C1'] },
-      { name: 'Laptop', params: ['A2', 'B2', 'C2'] },
-      // 更多电子产品...
-    ],
-    'Clothing': [
-      { name: 'T-Shirt', params: ['A3', 'B3', 'C3'] },
-      { name: 'Jeans', params: ['A4', 'B4', 'C4'] },
-      // 更多服装...
-    ],
-    'Books': [
-      { name: 'Novel', params: ['A5', 'B5', 'C5'] },
-      { name: 'Biography', params: ['A6', 'B6', 'C6'] },
-      // 更多书籍...
-    ]
-  };
-
-  // 根据输入的搜索词过滤物品
-  function filterItems(searchTerm) {
-    var itemsGrid = document.getElementById('itemsGrid');
-    itemsGrid.innerHTML = ''; // 清空当前网格内容
-
-    for (var category in items) {
-      if (items[category].some(item => item.name.includes(searchTerm))) {
-        var categoryTitle = document.createElement('h3');
-        categoryTitle.textContent = category;
-        itemsGrid.appendChild(categoryTitle);
-
-        items[category].forEach(function(item) {
-          if (item.name.includes(searchTerm)) {
-            var itemDiv = document.createElement('div');
-            itemDiv.className = 'item';
-            itemDiv.innerHTML = '<img src="' + item.image + '" alt="' + item.name + '"><p>' + item.name + '</p>';
-            itemsGrid.appendChild(itemDiv);
-
-            // 点击物品时的事件处理
-            itemDiv.onclick = function() {
-              itemClicked(item.name, item.params);
-            }
-          }
-        });
-      }
-    }
-  }
-
-  // 物品点击事件处理函数
-  function itemClicked(itemName, params) {
-    var displayArea = document.getElementById('displayArea');
-    if (displayArea) {
-      displayArea.innerHTML = 'Selected Item: ' + itemName;
-    }
-
-    // 调用另一个JS函数处理物品参数
-    handleItemParams(params);
-  }
-
-  // 处理物品参数的JS函数
-  function handleItemParams(params) {
-    // 这里可以根据需要处理参数
-    console.log('Item params:', params);
-  }
-
-  // 切换搜索框的显示和隐藏
-  function toggleSearchBox() {
-    var searchBox = document.getElementById('searchBox');
-    if (searchBox.classList.contains('collapsed')) {
-      searchBox.classList.remove('collapsed');
-      searchBox.classList.add('expanded');
-      // 动态生成品类选项
-      Object.keys(items).forEach(function(category) {
-        var categoryOption = document.createElement('button');
-        categoryOption.textContent = category;
-        categoryOption.onclick = function() {
-          filterItems(category);
-        };
-        document.getElementById('categoryOptions').appendChild(categoryOption);
-      });
-    } else {
-      searchBox.classList.remove('expanded');
-      searchBox.classList.add('collapsed');
-      document.getElementById('categoryOptions').innerHTML = ''; // 清空品类选项
-    }
-  }
-
-  // 绑定搜索按钮的点击事件
-  document.getElementById('toggleButton').addEventListener('click', function() {
-    var searchInput = document.getElementById('searchInput');
-    filterItems(searchInput.value);
-  });
-
-  // 初始化时展开搜索框
-  toggleSearchBox();
-</script>
-
-</body>
-</html>
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<title>Mobile Screen Mockup</title>  
+<style>  
+  body {  
+    font-family: Arial, sans-serif;  
+    background-color: #f2f2f2;  
+    margin: 0;  
+    padding: 0;  
+  }  
+    
+  .screen {  
+    background-color: #fff;  
+    border-radius: 20px;  
+    overflow: hidden;  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+    margin: 20px;  
+    padding: 10px;  
+  }  
+    
+  .screen-header {  
+    display: flex;  
+    justify-content: space-between;  
+    padding: 5px 10px;  
+  }  
+    
+  .screen-header > div {  
+    color: white;  
+    font-weight: bold;  
+    padding: 5px 10px;  
+    text-align: center;  
+  }  
+    
+  .screen-header .focus {  
+    background-color: blue;  
+  }  
+    
+  .screen-header .discover {  
+    background-color: purple;  
+  }  
+    
+  .screen-header .home {  
+    background-color: orange;  
+  }  
+    
+  .screen-content {  
+    display: flex;  
+    flex-wrap: wrap;  
+    padding: 10px;  
+  }  
+    
+  .screen-item {  
+    flex: 0 0 calc(50% - 10px);  
+    margin: 5px;  
+    background-color: #f9f9f9;  
+    border-radius: 10px;  
+    padding: 10px;  
+    display: flex;  
+    flex-direction: column;  
+    align-items: center;  
+  }  
+    
+  .screen-item img {  
+    width: 40px;  
+    height: 40px;  
+    border-radius: 50%;  
+    object-fit: cover;  
+    margin-bottom: 5px;  
+  }  
+    
+  .screen-item span {  
+    font-size: 14px;  
+  }  
+    
+  .screen-footer {  
+    display: flex;  
+    justify-content: space-between;  
+    padding: 10px;  
+  }  
+    
+  .screen-footer button {  
+    background-color: #ddd;  
+    border: none;  
+    padding: 5px 10px;  
+    border-radius: 5px;  
+    cursor: pointer;  
+  }  
+    
+  .screen-footer .yellow-button {  
+    background-color: yellow;  
+  }  
+</style>  
+</head>  
+<body>  
+  
+<div class="screen">  
+  <div class="screen-header">  
+    <div class="focus">关注</div>  
+    <div class="discover">发现</div>  
+    <div class="home">烹饪 收纳</div>  
+  </div>  
+  <div class="screen-content">  
+    <div class="screen-item">  
+      <img src="user-placeholder.png" alt="User Placeholder">  
+      <span>用户1</span>  
+      <span>88</span>  
+    </div>  
+    <div class="screen-item">  
+      <img src="user-placeholder.png"
