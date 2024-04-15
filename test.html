@@ -1,51 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>2x2 Grid with Clickable Links</title>
-    <style>
-        .grid-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr; /* 创建两列，每列大小相同 */
-            grid-template-rows: 1fr 1fr; /* 创建两行，每行大小相同 */
-            gap: 10px; /* 设置网格间隙 */
-        }
+<meta charset="UTF-8">
+<title>Searchable Collapsible Search Box with Smooth Transition</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
 
-        .grid-item {
-            background-color: #f0f0f0; /* 网格项的背景颜色 */
-            border: 1px solid #ccc; /* 边框 */
-            padding: 20px; /* 内边距 */
-            text-align: center; /* 文本居中 */
-            cursor: pointer; /* 鼠标悬停时显示手形光标 */
-        }
+  .search-box {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+  }
 
-        /* 为网格项添加过渡效果 */
-        .grid-item:hover {
-            background-color: #e0e0e0;
-        }
-    </style>
+  .search-box.collapsed {
+    flex-direction: column;
+    height: 40px; /* 输入框和按钮的高度 */
+  }
+
+  .search-box.expanded {
+    height: 200px; /* 根据需要调整高度 */
+  }
+
+  .search-input {
+    flex: 1;
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+
+  .search-button {
+    padding: 5px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  .search-button:hover {
+    background-color: #0056b3;
+  }
+
+  .category-options {
+    overflow-y: auto;
+    max-height: 100px; /* 根据需要调整 */
+  }
+
+  .items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 10px;
+  }
+
+  .item {
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #ddd;
+  }
+
+  .item img {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
 </head>
 <body>
 
-<div class="grid-container">
-    <!-- 第一个网格项 -->
-    <div class="grid-item" onclick="location.href='link1.html';">
-        Link 1
-    </div>
-    <!-- 第二个网格项 -->
-    <div class="grid-item" onclick="location.href='link2.html';">
-        Link 2
-    </div>
-    <!-- 第三个网格项 -->
-    <div class="grid-item" onclick="location.href='link3.html';">
-        Link 3
-    </div>
-    <!-- 第四个网格项 -->
-    <div class="grid-item" onclick="location.href='link4.html';">
-        Link 4
-        123456test
-    </div>
+<div class="search-box" id="searchBox">
+  <input type="text" class="search-input" id="searchInput" placeholder="Search items...">
+  <button class="search-button" id="toggleButton">Search</button>
+  <div class="category-options" id="categoryOptions">
+    <!-- 品类选项将在这里动态生成 -->
+  </div>
+  <div class="items-grid" id="itemsGrid">
+    <!-- 物品网格内容动态生成 -->
+  </div>
 </div>
+
+<script>
+  // 模拟物品数据
+  var items = {
+    'Electronics': [
+      { name: 'Smartphone', params: ['A1', 'B1', 'C1'] },
+      { name: 'Laptop', params: ['A2', 'B2', 'C2'] },
+      // 更多电子产品...
+    ],
+    'Clothing': [
+      { name: 'T-Shirt', params: ['A3', 'B3', 'C3'] },
+      { name: 'Jeans', params: ['A4', 'B4', 'C4'] },
+      // 更多服装...
+    ],
+    'Books': [
+      { name: 'Novel', params: ['A5', 'B5', 'C5'] },
+      { name: 'Biography', params: ['A6', 'B6', 'C6'] },
+      // 更多书籍...
+    ]
+  };
+
+  // 根据输入的搜索词过滤物品
+  function filterItems(searchTerm) {
+    var itemsGrid = document.getElementById('itemsGrid');
+    itemsGrid.innerHTML = ''; // 清空当前网格内容
+
+    for (var category in items) {
+      if (items[category].some(item => item.name.includes(searchTerm))) {
+        var categoryTitle = document.createElement('h3');
+        categoryTitle.textContent = category;
+        itemsGrid.appendChild(categoryTitle);
+
+        items[category].forEach(function(item) {
+          if (item.name.includes(searchTerm)) {
+            var itemDiv = document.createElement('div');
+            itemDiv.className = 'item';
+            itemDiv.innerHTML = '<img src="' + item.image + '" alt="' + item.name + '"><p>' + item.name + '</p>';
+            itemsGrid.appendChild(itemDiv);
+
+            // 点击物品时的事件处理
+            itemDiv.onclick = function() {
+              itemClicked(item.name, item.params);
+            }
+          }
+        });
+      }
+    }
+  }
+
+  // 物品点击事件处理函数
+  function itemClicked(itemName, params) {
+    var displayArea = document.getElementById('displayArea');
+    if (displayArea) {
+      displayArea.innerHTML = 'Selected Item: ' + itemName;
+    }
+
+    // 调用另一个JS函数处理物品参数
+    handleItemParams(params);
+  }
+
+  // 处理物品参数的JS函数
+  function handleItemParams(params) {
+    // 这里可以根据需要处理参数
+    console.log('Item params:', params);
+  }
+
+  // 切换搜索框的显示和隐藏
+  function toggleSearchBox() {
+    var searchBox = document.getElementById('searchBox');
+    if (searchBox.classList.contains('collapsed')) {
+      searchBox.classList.remove('collapsed');
+      searchBox.classList.add('expanded');
+      // 动态生成品类选项
+      Object.keys(items).forEach(function(category) {
+        var categoryOption = document.createElement('button');
+        categoryOption.textContent = category;
+        categoryOption.onclick = function() {
+          filterItems(category);
+        };
+        document.getElementById('categoryOptions').appendChild(categoryOption);
+      });
+    } else {
+      searchBox.classList.remove('expanded');
+      searchBox.classList.add('collapsed');
+      document.getElementById('categoryOptions').innerHTML = ''; // 清空品类选项
+    }
+  }
+
+  // 绑定搜索按钮的点击事件
+  document.getElementById('toggleButton').addEventListener('click', function() {
+    var searchInput = document.getElementById('searchInput');
+    filterItems(searchInput.value);
+  });
+
+  // 初始化时展开搜索框
+  toggleSearchBox();
+</script>
 
 </body>
 </html>
