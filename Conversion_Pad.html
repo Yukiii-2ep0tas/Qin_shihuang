@@ -43,11 +43,11 @@
                 <div class="search_bar" onclick="toggle_input_search_panel()">
                     <div style="color: black;font-size: 75%;position: relative;left: 27%;top: 27%">搜索</div>
                 </div>
+                <div id="input_search_panel" class="embedded-content">
+                    <iframe src="Input_Search_Panel.html" frameborder="0" width="70%" height="100%"></iframe>
+                </div>
                 <div id="input_display" style="position: absolute; left:95%; top: 75%; transform: translate(-100%,-50%);font-size: 40px; text-align: right; color: black;"></div>
                 <div id="input_item_name" style="position: relative;left: 5%; top:20%;font-size: 40px;text-align: left;color: black;"></div>
-                <div id="input_search_panel" class="embedded-content">
-                    <iframe src="Search_Panel.html" frameborder="0" width="100%" height="100%"></iframe>
-                </div>
             </div>
             <div id="output_area">
                 <div class="search_bar"  onclick="toggle_output_search_panel()">
@@ -56,7 +56,7 @@
                 <div id="result_display" style="position: absolute; left:95%; top: 75%; transform: translate(-100%,-50%);font-size: 40px; text-align: right; color: black;"></div>
                 <div id="output_item_name" style="position: relative; left: 5%; top:20%;font-size: 40px;text-align: left;color: black;"></div>
                 <div id="output_search_panel" class="embedded-content">
-                    <iframe src="Search_Panel.html" frameborder="0" width="100%" height="100%"></iframe>
+                    <iframe src="Output_Search_Panel.html" frameborder="0" width="100%" height="100%"></iframe>
                 </div>
             </div>
             <div class="numpad_area" id="numpad_area">
@@ -106,7 +106,8 @@
         var result_display = document.getElementById('result_display');
         var input_item_name = document.getElementById('input_item_name');
         var input_number = parseFloat(document.getElementById('input_display'))
-        result_display.textContent = 1
+        result_display.textContent = input_number * 
+        
     }
     function backspace(){
         var display = document.getElementById('input_display');
@@ -171,7 +172,7 @@
             // 更新父页面的内容
             document.getElementById('input_item_name').textContent = event.data.text;
         }
-        if (event.data && event.data.action === 'update_input_item_name' && document.getElementById('input_item_name').textContent != NaN) {
+        if (event.data && event.data.action === 'update_output_item_name' && document.getElementById('input_item_name').textContent != NaN) {
             // 更新父页面的内容
             document.getElementById('output_item_name').textContent = event.data.text;
         }
