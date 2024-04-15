@@ -1,51 +1,88 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>2x2 Grid with Clickable Links</title>
-    <style>
-        .grid-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr; /* 创建两列，每列大小相同 */
-            grid-template-rows: 1fr 1fr; /* 创建两行，每行大小相同 */
-            gap: 10px; /* 设置网格间隙 */
-        }
-
-        .grid-item {
-            background-color: #f0f0f0; /* 网格项的背景颜色 */
-            border: 1px solid #ccc; /* 边框 */
-            padding: 20px; /* 内边距 */
-            text-align: center; /* 文本居中 */
-            cursor: pointer; /* 鼠标悬停时显示手形光标 */
-        }
-
-        /* 为网格项添加过渡效果 */
-        .grid-item:hover {
-            background-color: #e0e0e0;
-        }
-    </style>
-</head>
-<body>
-
-<div class="grid-container">
-    <!-- 第一个网格项 -->
-    <div class="grid-item" onclick="location.href='link1.html';">
-        Link 1
-    </div>
-    <!-- 第二个网格项 -->
-    <div class="grid-item" onclick="location.href='link2.html';">
-        Link 2
-    </div>
-    <!-- 第三个网格项 -->
-    <div class="grid-item" onclick="location.href='link3.html';">
-        Link 3
-    </div>
-    <!-- 第四个网格项 -->
-    <div class="grid-item" onclick="location.href='link4.html';">
-        Link 4
-        123456test
-    </div>
-</div>
-
-</body>
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<title>生活经验社区</title>  
+<style>  
+    body {  
+        font-family: Arial, sans-serif;  
+        margin: 0;  
+        padding: 20px;  
+    }  
+    .header {  
+        display: flex;  
+        justify-content: space-between;  
+        align-items: center;  
+        margin-bottom: 20px;  
+    }  
+    .avatar {  
+        width: 50px;  
+        height: 50px;  
+        border-radius: 50%;  
+        background-color: #ccc; /* 替换为实际头像图片 */  
+    }  
+    .post {  
+        margin-bottom: 20px;  
+        border: 1px solid #ccc;  
+        padding: 10px;  
+        border-radius: 5px;  
+    }  
+    .post-info {  
+        display: flex;  
+        align-items: center;  
+    }  
+    .post-content {  
+        margin-left: 20px;  
+    }  
+    .actions {  
+        display: flex;  
+        justify-content: flex-end;  
+    }  
+    .action-button {  
+        margin-right: 10px;  
+        padding: 5px 10px;  
+        border: 1px solid #ccc;  
+        border-radius: 4px;  
+        cursor: pointer;  
+    }  
+    .action-button:last-child {  
+        margin-right: 0;  
+    }  
+</style>  
+</head>  
+<body>  
+  
+<div class="header">  
+    <h1>生活经验社区</h1>  
+    <div>  
+        <img class="avatar" src="images/avatars/avatar-1.jpg" alt="用户头像">  
+        <span>用户名</span>  
+    </div>  
+</div>  
+  
+<div class="post">  
+    <div class="post-info">  
+        <img class="avatar" src="images/avatars/avatar-1.jpg" alt="发帖人头像">  
+        <div>  
+            <span class="nickname">发帖人昵称</span>  
+            <span class="timestamp">发帖时间：2023-04-01 12:00</span>  
+        </div>  
+    </div>  
+    <div class="post-content">  
+        <h2 class="post-title">帖子标题</h2>  
+        <p class="post-body">这里是帖子的具体内容，描述了一些生活经验...</p>  
+    </div>  
+    <div class="actions">  
+        <button class="action-button">点赞</button>  
+        <button class="action-button">评论</button>  
+        <button class="action-button">收藏</button>  
+        <button class="action-button">转发</button>  
+        <button class="action-button">关注</button>  
+    </div>  
+</div>  
+  
+<!-- 这里可以复制上面的<div class="post">...</div>结构来添加更多帖子 -->  
+  
+</body>  
 </html>
