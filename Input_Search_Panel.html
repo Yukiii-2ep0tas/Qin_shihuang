@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <head>
     <link rel="stylesheet" href="css/search_panel_style.css">
 </head>
@@ -21,19 +22,15 @@
 
 <script>
     var itemsData = {
-            cooking: ['茶匙', '盎司'],
-            furniture: ['单人沙发','双开门冰箱'],
-            volumn: ['1立方米'],
-            environment: [['昆明湖',2000000]],
-            explore: ['一百万人民币']
-        };
-    function toggle_conversion(itemText){
-        window.parent.postMessage({action: 'update_input_item_name', text: itemText}, '*')
+        cooking: [['茶匙'], ['盎司']],
+        furniture: [['单人沙发'], ['双开门冰箱']],
+        volumn: [['1立方米'], ['1瓶农夫山泉矿泉水']],
+        environment: [['昆明湖', 'v', 2000000, 'm^3'], ['西湖', 'v', 14000000, 'm^3']],
+        explore: [['一百万人民币', 'v', 1.2, 'm^3']]
+    };
+    function toggle_conversion(item) {
+        window.parent.postMessage({ action: 'update_input_item_name', text: item[0], itemArray:item}, '*')
     }
-
-    function initItemsGrid() {
-            updateItemsGrid();
-        }
 
     function updateItemsGrid(categoryItem) {
         var itemsGrid = document.getElementById('itemsGrid');
@@ -44,29 +41,22 @@
         var items = itemsData[selectedCategory];
 
         // 动态生成并添加物品到物品列表
-        items.forEach(function(item) {
+        items.forEach(function (item) {
             var itemDiv = document.createElement('div');
             itemDiv.className = 'item';
-            itemDiv.textContent = item;
+            itemDiv.textContent = item[0];
+            itemDiv.onclick = function() {
+                toggle_conversion(item); // 传递整个item数组
+            };
             itemsGrid.appendChild(itemDiv);
         });
-        }
+    }
 
-        // 绑定分类标签的点击事件
-        function bindCategoryClickEvents() {
-            var categoryItems = document.querySelectorAll('.category_item');
-            categoryItems.forEach(function(item) {
-                item.addEventListener('click', function() {
-                    // 避免重复绑定事件
-                    item.removeEventListener('click', updateItemsGrid);
-                    updateItemsGrid(this);
-                });
-            });
-        }
+    // 绑定分类标签的点击事件
+    function bindCategoryClickEvents() {
+        var categoryItems = document.querySelectorAll('.category_item');
+    }
 
-        // 页面加载完成后执行初始化和事件绑定
-        window.onload = function() {
-            initItemsGrid();
-            bindCategoryClickEvents();
-        };
+    // 页面加载完成后执行初始化和事件绑定
+
 </script>

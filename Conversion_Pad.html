@@ -81,8 +81,8 @@
 </body>
 <script>
     function clean_all(){
-        var display = document.getElementById('input_display');
-        display.textContent = ''
+        document.getElementById('input_display').textContent = '';
+        document.getElementById('result_display').textContent = '';
     }
     function input(num){
         var display = document.getElementById('input_display');
