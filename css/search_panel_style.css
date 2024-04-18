@@ -41,15 +41,19 @@
     display: flex;
     flex-wrap: wrap; /* 允许网格换行 */
     padding: 20px;
-    font-size: 50%;
+    font-size: 80%;
     text-align: center;
     cursor: pointer;
 }
 .item {
-    width: 25%; /* 每个物品占据网格的25%宽度 */
+    /* width: 25%; /* 每个物品占据网格的25%宽度 */
     padding: 10px;
+    padding-top: 5px;
+    margin: 3px;
     border: 1px solid #ccc; /* 物品边框 */
     box-sizing: border-box; /* 边框和内边距包含在宽度内 */
+    height: 30px;
+    border-radius: 30px;
 }
 
 .item:hover{

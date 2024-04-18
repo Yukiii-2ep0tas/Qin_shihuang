@@ -53,11 +53,11 @@
                 <div class="search_bar"  onclick="toggle_output_search_panel()">
                     <div style="color: black;font-size: 75%;position: relative;left: 27%;top:27%">搜索</div>
                 </div>
-                <div id="result_display" style="position: absolute; left:95%; top: 75%; transform: translate(-100%,-50%);font-size: 40px; text-align: right; color: black;"></div>
-                <div id="output_item_name" style="position: relative; left: 5%; top:20%;font-size: 40px;text-align: left;color: black;"></div>
                 <div id="output_search_panel" class="embedded-content">
                     <iframe src="Output_Search_Panel.html" frameborder="0" width="80%" height="100%"></iframe>
                 </div>
+                <div id="result_display" style="position: absolute; left:95%; top: 75%; transform: translate(-100%,-50%);font-size: 40px; text-align: right; color: black;"></div>
+                <div id="output_item_name" style="position: relative; left: 5%; top:20%;font-size: 40px;text-align: left;color: black;"></div>
             </div>
             <div class="numpad_area" id="numpad_area">
                 <div onclick="input(1)">1</div>
@@ -106,7 +106,7 @@
         var result_display = document.getElementById('result_display');
         var input_item_name = document.getElementById('input_item_name');
         var input_number = parseFloat(document.getElementById('input_display'));
-        result_display.textContent = input_number * 363000000000;
+        result_display.textContent = 363000000000;
     }
     function backspace(){
         var display = document.getElementById('input_display');

@@ -29,7 +29,7 @@
         explore: [['一百万人民币', 'v', 1.2, 'm^3']]
     };
     function toggle_conversion(item) {
-        window.parent.postMessage({ action: 'update_input_item_name', text: item[0], itemArray:item}, '*')
+        window.parent.postMessage({ action: 'update_output_item_name', text: item[0], itemArray:item}, '*')
     }
 
     function updateItemsGrid(categoryItem) {
