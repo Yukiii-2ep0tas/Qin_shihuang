@@ -15,6 +15,26 @@
     cursor: pointer;
     transition: background-color 0.2s ease
 }
+
+.numpad_area > div:nth-child(4),
+.numpad_area > div:nth-child(8),
+.numpad_area > div:nth-child(12),
+.numpad_area > div:nth-child(15){
+  background-color:rgba(255, 255, 255, 0.7);
+}
+.numpad_area > div:nth-child(13){
+  grid-column: span 2;
+
+}
+
+.numpad_area.folded {
+  display: none;
+}
+
+.numpad_area.expanded #main_container{
+  height: 50%;
+}
+
 .numpad_area div:active{
     width: 100%;
     height: 100%;
@@ -85,6 +105,7 @@
     top: 10%;
     width: 160px;
     height: 40px;
+    color: black;
     background: rgba(255, 255, 255, 0.6);
     border-radius: 40px;
     cursor: pointer;
@@ -92,7 +113,17 @@
     border-width: 0.5px;
     border-style: solid;
   }
-
+.search_bar img {
+  height: 20px;
+  position: relative;
+  top: 10px;
+  left: 10px;
+}
+.search_bar span {
+  position: relative;
+  left: 20px;
+  top: 4px;
+}
 
 .embedded-content {
   display: none; /* 默认不显示嵌入的内容 */
@@ -106,26 +137,6 @@
 .embedded-content > iframe {
   border-radius: 20px;
 }
-
-.numpad_area > div:nth-child(4),
-.numpad_area > div:nth-child(8),
-.numpad_area > div:nth-child(12),
-.numpad_area > div:nth-child(15){
-  background-color:rgba(255, 255, 255, 0.7);
-}
-.numpad_area > div:nth-child(13){
-  grid-column: span 2;
-
-}
-
-.numpad_area.folded {
-  display: none;
-}
-
-.numpad_area.expanded #main_container{
-  height: 50%;
-}
-
 
 body {
   margin: 0;
