@@ -3,11 +3,12 @@
     flex-direction: column;
     margin: 0;
     background-image: url(../images/bg2.jpg);
-    background-size: 170%;
+    background-size: 135%;
     min-width: 480px;
+    max-width: 480px;
 }
 .header {
-    height: 7vh;
+    height: 6vh;
     background-color: white;
 }
 #title {
@@ -20,7 +21,7 @@
 }
 
 #testimonials {
-    height: 21vh;
+    height: 15vh;
     background-color: rgba(255,255,255,0.8);
     backdrop-filter: blur(10px);
     border-top-left-radius:40px;
@@ -29,20 +30,22 @@
 }
 
 #testimonial_text {
-    position:absolute;
-    padding: 40px;
-    font-size: 25px;
+    position:relative;
+    left: 10%;
+    top: 30%;
+    font-size: 150%;
 }
 
 #testimonials > img{
     position: absolute;
-    right: 25%;
-    top:-10px;
+    right:4%;
+    top: -20%;
     z-index: 1000;
+    height: 150%;
 }
 
 .functions {
-    height: 33vh;
+    height: 40vh;
     background-color: rgba(255,255,255,0.8);
     backdrop-filter: blur(10px);
 }
@@ -50,25 +53,37 @@
 .functions {
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-template-rows: 1;
+    grid-template-rows: repeat(2,1fr);
     justify-items: center;
     align-items: center;
 }
 
 .functions > div {
-    padding: 5%;
-    background-color:#ffd34e;
-    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 1vh;
+    background-color:#ffe751;
     text-align: center;
+    justify-items:center;
     border-radius: 10px;
-    box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.25);
 }
 
 .functions > div:nth-child(1) {
+    flex-direction: row;
     grid-column: span 3;
     border-radius: 50px;
-    width: 200px;
-    height: 4vh;
+    width: 240px;
+    height: 70px;
+}
+
+.functions > #start_conv_button >#go_button {
+    position: relative;
+    padding: 15%;
+    width: 10%;
+    border-radius: 50px;
+    top:-2%;
+    right: -6%;
+    background-color: rgb(255, 255, 255);
 }
 
 .functions > div:nth-child(2){
@@ -83,14 +98,15 @@
 .functions > div:nth-child(3),
 .functions > div:nth-child(4){
     width: 120px;
-    height: 80px;
-    margin-bottom: px;
-    background-color: rgba(255,235,70,0.6);
+    height: 100px;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    background-color: #ffefc0;
     
 }
 
 .plate {
-    height:9vh;
+    height:10vh;
     background-color: rgba(255,255,255,0.7);
     backdrop-filter: blur(20px);
     display: grid;
@@ -100,8 +116,10 @@
 }
 
 .plate > div{
+    display:flex;
+    flex-direction: column;
     font-size: 70%;
     text-align: center;
     color: black;
-
 }
+
