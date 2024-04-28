@@ -1,0 +1,638 @@
+@ -1,748 +1,696 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+
+	<!--- basic page needs
+   ================================================== -->
+	<meta charset="utf-8">
+	<title>秦始皇</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- mobile specific metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+   ================================================== -->
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/vendor.min.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<!-- script
+   ================================================== -->
+	<script src="js/modernizr.js"></script>
+
+	<!-- favicons
+	================================================== -->
+	<link rel="shortcut icon" href="pic.png">
+
+</head>
+
+<body>
+	
+	<!-- header
+   ================================================== -->
+	<header id="main-header">
+
+		<div class="row">
+
+			<div class="logo">
+				<a href="Main-index.html">秦始皇</a>
+			</div>
+
+			<nav id="nav-wrap">
+
+				<a class="mobile-btn" href="#nav-wrap" title="Show navigation">
+					<span class="menu-icon">Menu</span>
+				</a>
+				<a class="mobile-btn" href="#" title="Hide navigation">
+					<span class="menu-icon">Menu</span>
+				</a>
+
+				<ul id="nav" class="nav">
+					<li><a class="smoothscroll" href="#hero">首页</a></li>
+					<li><a class="smoothscroll" href="#portfolio">单位换算</a></li>
+					<li><a class="smoothscroll" href="#services">兴趣知识</a></li>
+					<li><a class="smoothscroll" href="#about">生活经验</a></li>
+					<li><a class="smoothscroll" href="#contact">关于我们</a></li>
+				</ul> <!-- end #nav -->
+
+			</nav> <!-- end #nav-wrap -->
+
+		</div>
+
+	</header> <!-- end header -->
+
+
+	<!-- homepage hero
+   ================================================== -->
+	<section id="hero">
+
+		<div class="row hero-content">
+
+			<div class="twelve columns hero-container">
+
+				<!-- hero-slider start-->
+				<div id="hero-slider" class="flexslider">
+
+					<ul class="slides">
+						<li>
+							<div class="flex-caption">
+								<h1>欢迎使用“秦始皇”！</h1>
+								<h2 style="color:#292c73">统一度量衡，换算不头疼</h2>
+							</div>
+						</li>
+					</ul>
+
+				</div> <!-- end hero-slider -->
+
+			</div> <!-- end twelve columns-->
+
+		</div> <!-- end row -->
+
+		<div id="more">
+			<a onclick="location.href = 'Conversion_Pad.html'" style="font-weight: bold;">开始换算</a> <!-- 开始换算按钮，跳转到换算器页面-->
+		</div>
+
+	</section>
+	<!-- end homepage hero -->
+
+
+		<!-- modal popup
+	   	========================================================= -->
+		<div id="modal-01" class="popup-modal mfp-hide">
+
+			<div class="media">
+				<img src="images/portfolio/modals/a_bottle_of_nongfu_spring.png">
+			</div>
+
+			<div class="description-box">
+				<h4>你知道昆明湖到底有多少水吗？</h4>
+				<p>昆明湖的水量多达</p>
+			</div>
+
+			<div class="link-box group">
+				<a href="http://www.behance.net">去换算页面体验</a>
+				<a href="#" class="popup-modal-dismiss">关闭</a>
+			</div>
+
+		</div><!-- modal-01 end -->
+
+		<div id="modal-02" class="popup-modal mfp-hide">
+
+			<div class="media">
+				<img src="images/portfolio/modals/a-orange.jpg" alt="Hotel Sign" />
+			</div>
+
+			<div class="description-box">
+				<h4>你知道一斤橘子大约有多少个吗</h4>
+				<p>一斤橘子大约有</p>
+			</div>
+
+			<div class="link-box">
+				<a href="http://www.behance.net">去换算页面体验</a>
+				<a href="#" class="popup-modal-dismiss">关闭</a>
+			</div>
+
+		</div><!-- modal-02 end -->
+
+		<div id="modal-03" class="popup-modal mfp-hide">
+
+			<div class="media">
+				<img src="images/portfolio/modals/a-tv.jpg" alt="" />
+			</div>
+
+			<div class="description-box">
+				<h4>你知道55寸的电视机有多大吗</h4>
+				<p>55寸的电视机大约有...</p>
+			</div>
+
+			<div class="link-box">
+				<a href="http://www.behance.net">去换算页面体验</a>
+				<a href="#" class="popup-modal-dismiss">关闭</a>
+			</div>
+
+		</div><!-- modal-03 end -->
+
+		<div id="modal-04" class="popup-modal mfp-hide">
+
+			<div class="media">
+				<img src="images/portfolio/modals/a-fridge.jpg" alt="" />
+			</div>
+
+			<div class="description-box">
+				<h4>你知道容量400升的冰箱有多大吗</h4>
+				<p>容量为400升的冰箱的大小约为...</p>
+			</div>
+
+			<div class="link-box">
+				<a href="http://www.behance.net">去换算页面体验</a>
+				<a href="#" class="popup-modal-dismiss">关闭</a>
+			</div>
+
+		<div id="modal-06" class="popup-modal mfp-hide">
+
+			<div class="media">
+				<img src="images/portfolio/modals/a-spoon.png" alt="" />
+			</div>
+
+			<div class="description-box">
+				<h4>你知道一茶匙的盐大约有多少吗</h4>
+				<p>一茶匙的盐大约有...</p>
+			</div>
+
+			<div class="link-box">
+				<a href="http://www.behance.net">去换算页面体验</a>
+				<a href="#" class="popup-modal-dismiss">关闭</a>
+			</div>
+
+		</div><!-- modal-06 end -->
+
+		<div id="modal-07" class="popup-modal mfp-hide">
+
+			<div class="media">
+				<img src="images/portfolio/modals/a-piza.png" alt="" />
+			</div>
+
+			<div class="description-box">
+				<h4>你知道八寸的披萨有多大吗</h4>
+				<p>八寸的披萨大约有...</p>
+
+			</div>
+
+			<div class="link-box">
+				<a href="http://www.behance.net">去换算页面体验</a>
+				<a href="#" class="popup-modal-dismiss">关闭</a>
+			</div>
+
+		</div><!-- modal-07 end -->
+		</div> <!-- end row -->
+
+
+
+
+	<!-- Services Section
+   ================================================== -->
+	<section id="services">
+
+		<div class="row section-head">
+
+			<div class="twelve columns">
+                <p></p><br>
+				<h1 style="color:#000; font-size: 24px; font-weight: bold;">这里是一些有趣的单位换算知识<span>.</span></h1><b></b>
+				<p>一个昆明湖的水量相当于36.36亿瓶550毫升的矿泉水，堆积起来有一栋三层小楼那么大！<br>
+					这就是秦始皇所能带给你的直观的单位换算！
+				</p>
+
+				<div id="next">
+					<a style="color: aliceblue ;">下一条</a> 
+				</div>
+			</div>
+
+		</div> <!-- end section-head -->
+		<div class="row items">
+
+			<!-- portfolio-wrapper -->
+			<div id="portfolio-wrapper" class="bgrid-fourth s-bgrid-third tab-bgrid-half">
+
+				<div class="bgrid folio-item">
+					<div class="item-wrap">
+						<a href="#modal-01">
+							<img src="images/portfolio/pic1.jpg" alt="昆明湖">
+							<div class="overlay"></div>
+							<div class="portfolio-item-meta">
+								<h4>昆明湖</h4>
+								<p>点 击 探 索</p>
+							</div>
+						</a>
+					</div>
+				</div> <!-- item end -->
+
+				<div class="bgrid folio-item">
+					<div class="item-wrap">
+						<a href="#modal-02">
+							<img src="images/portfolio/pic2.jpg" alt="橘子">
+							<div class="overlay">
+								<div class="portfolio-item-meta">
+									<h4>橘子</h4>
+									<p>点击探索</p>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div> <!-- item end -->
+
+				<div class="bgrid folio-item">
+					<div class="item-wrap">
+						<a href="#modal-03">
+							<img src="images/portfolio/pic3.jpg" alt="电视">
+							<div class="overlay">
+								<div class="portfolio-item-meta">
+									<h4>电视</h4>
+									<p>点击探索</p>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div> <!-- item end -->
+
+				<div class="bgrid folio-item">
+					<div class="item-wrap">
+						<a href="#modal-04">
+							<img src="images/portfolio/pic4.jpg" alt="按摩椅">
+							<div class="overlay">
+								<div class="portfolio-item-meta">
+									<h4>按摩椅</h4>
+									<p>点击探索</p>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div> <!-- item end -->
+
+				<div class="bgrid folio-item">
+					<div class="item-wrap">
+						<a href="#modal-06">
+							<img src="images/portfolio/pic6.jpg" alt="电子产品">
+							<div class="overlay">
+								<div class="portfolio-item-meta">
+									<h4>电子产品</h4>
+									<p>点击探索</p>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div> <!-- item end -->
+
+				<div class="bgrid folio-item">
+					<div class="item-wrap">
+						<a href="#modal-07">
+							<img src="images/portfolio/pic7.jpg" alt="披萨">
+							<div class="overlay">
+								<div class="portfolio-item-meta">
+									<h4>披萨</h4>
+									<p>点击探索</p>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div> <!-- item end -->
+
+
+			</div> <!-- end portfolio-wrapper -->
+		</div> <!-- end row -->
+	</section> <!-- end services -->
+
+
+	<!-- About Section
+   ================================================== -->
+	<section id="about">
+
+		<div class="row section-head">
+	
+			<div class="twelve columns">
+
+				<div class="twelve columns">
+					<h1 style="color:#000; font-size: 24px; font-weight: bold;">生活经验社区<span>.</span></h1>
+					<hr />
+				</div>
+				<img src="images/communicaty.png" alt="社区图片">
+				
+		</div> <!-- end row -->
+	
+
+	
+			</div> <!-- end section-ads -->
+	
+		</div> <!-- end call-to-action -->
+	
+	</section> <!-- end about -->
+	<!-- contact
+   ================================================== -->
+	<section id="contact">
+
+		<div class="row section-head">
+
+			<div class="twelve columns">
+				<h1 style="color:#000; font-size: 24px; font-weight: bold;">产品定位<span>.</span></h1>
+				<hr />
+				<p style="color: #000;">一款将单位换算具象化的工具软件（小程序），将数据转化为直观认知。主要适配手机、平板端两种界面。</p>
+			</div>
+
+		</div> <!-- end section-head -->
+
+		<div class="row section-head">
+
+			<div class="twelve columns">
+				<h1 style="color:#000; font-size: 24px; font-weight: bold;">信息架构<span>.</span></h1>
+				<hr />
+			</div>
+
+		</div> <!-- end section-head -->
+		<div class="twelve columns">
+			<img src="images/tecture.png" alt="信息架构图">
+		</div>
+
+		<div class="row team section-head">
+
+			<div class="twelve columns">
+
+				<h1 style="color:#000; font-size: 24px; font-weight: bold;">用户模型<span>.</span></h1>
+				<hr />
+
+			</div>
+
+		</div> <!-- end section-head -->
+
+		<div class="row">
+
+			<div id="team-wrapper" class="bgrid-third s-bgrid-third tab-bgrid-third mob-bgrid-whole group">
+
+				<div class="bgrid member">
+
+					<div class="member-pic">
+						<img src="images/team/小莫.jpg" alt="" />
+						<div class="mask"></div>
+					</div>
+					<div class="member-name">
+						<h3>用户模型一：<br>缺乏尺寸概念的小莫</h3>
+						<span style="color: #000;line-height:2; font-size: 15px;">小莫，26岁，上班族。<br>她初入社会，在外工作租房，缺乏生活经验，无法像年长者一样熟练掌握某些单位概念。离开家的她无法再遇到问题大喊一声“妈！”，也难以获得像妈妈给出的那样简单易懂的建议。
+						</span>
+						<h3>情景故事一：<br>买按摩椅的小莫</h3>
+					</div>
+					<p  style="color: #000;">小莫在购物软件上挑选到一个心仪的按摩椅，但小莫光凭尺寸数据很难想象出按摩椅的大小，到底要腾出多少空间才能放得下按摩椅。小莫打开了”秦始皇”小程序，输入了客服提供的尺寸数据，并提供了自己的鞋码和身高数据，秦始皇告诉小莫站立时按摩椅长约五脚，宽约两脚半，高约小莫的从脚底到胯部；平躺时按摩椅长约六脚，宽约两脚半，高约从小莫的脚底到髋部。她把自己购买和预估按摩椅尺寸的过程发在了秦始皇生活经验分享区，还附上了自己收纳闲置物品的经验。在秦始皇小程序中不仅能够得到物品尺寸测算的简单方法，还能够和其他同龄人交流他们的生活经验，得到很多年长者更为高效便捷的建议，秦始皇让她的生活变得更加便捷更加多彩。
+					</p>
+				</div> <!-- end member -->
+
+				<div class="bgrid member">
+
+					<div class="member-pic">
+						<img src="images/team/小杰.jpg" alt="" />
+						<div class="mask"></div>
+					</div>
+					<div class="member-name">
+						<h3>用户模型二：<br>充满好奇心的阿杰</h3>
+						<span style="color: #000;line-height:2; font-size: 15px;">阿杰，20岁，大学生。<br>他经常上网冲浪，对于新发生的事件和新出现的事物接受能力较强，对生活中的事物充满好奇心和探索欲，并渴望了解到更多新奇有趣的内容和知识。
+						</span>
+						<h3>情景故事二：<br>阅览新闻的阿杰</h3>
+					</div>
+
+					<p  style="color: #000;line-height:2; font-size: 15px;">阿杰在网上了解到目前本市日均用水量达到了340万立方米左右，如果按照昆明湖200万立方米的容积计算，相当于一天用掉1个半昆明湖的水量。阿杰对此产生了好奇，1个半昆明湖的水应该是相当庞大的数量，但是他想象不到200万立方米的水量是什么概念。于是阿杰打开了“秦始皇”软件，软件可以自主决定以什么来作为度量单位，阿杰决定以桌上的一瓶550毫升的矿泉水为单位，他设置好单位后在输入框内输入“200万立方米的水”，“秦始皇”软件很快给出了答案：200万立方米的水相当于36.36亿瓶550毫升的矿泉水，堆积起来有一栋三层小楼那么大。阿杰直观的意识到了在炎热的天气下城市用水需求有多么庞大，他觉得这样的换算方式易懂又有趣。阿杰不仅收获了乐趣和好奇心，还对尺寸单位有了更深刻的理解。
+
+					</p>
+
+				</div> <!-- end member -->
+
+				<div class="bgrid member">
+
+					<div class="member-pic">
+						<img src="images/team/老杨.jpg" alt="" />
+						<div class="mask"></div>
+					</div>
+					<div class="member-name">
+						<h3>用户模型三：<br>学习新东西的老杨</h3>
+						<span style="color: #000;line-height:2; font-size: 15px;">老杨，58岁，退休工人。<br>他希望充实丰富自己的退休生活，但很多新鲜的事物接受起来比较困难，尤其是对凭借生活经验解决问题的他而言，精确的数字单位显得尤其晦涩。他希望单位能够以他熟悉的方式出现。
+						</span>
+						<h3>情景故事三：<br>学习烘焙的老杨</h3>
+					</div>
+					<p  style="color: #000;">老杨在商场活动抽中了一台烤箱，于是决定利用空余时间学习一些简单的烘焙知识。但他却在烘焙菜谱给出的材料用量上犯了难，深耕多年中式炒菜的他对英制单位完全没有概念，对于“一茶匙”等抽象单位，他更是难以把握，经常放错了量导致烘焙失败。于是老杨决定借助“秦始皇”小程序，他发现小程序针对英制和公制换算难的问题，提供了一些口诀和经验公式来辅助快速运算，例如把“茶匙”直接转化为公制单位。小程序还可以进行具象化的单位转化，例如250g奶油大约是多大一碗？九英寸的蛋糕有多大？这些功能极大方便了他的烘焙准备过程，原本需要反复进行的“搜索-计算-记录-备料”的操作被简化为了“搜索-输入数字-备料”，节约了时间和操作步骤，方便了老杨学习和探索新的技能。
+
+					</p>
+				</div> <!-- end member -->
+
+			</div> <!-- end team-wrapper -->
+
+		</div> <!-- end row -->
+
+		<section id="testimonials">
+			<div class="row content flex-container">
+	
+				<div id="testimonial-slider" class="flexslider">
+	
+					<ul class="slides">
+	
+						<li>	
+						
+							<div class="testimonial-author" style="padding-bottom: 5%;">
+								<img src="images/icons/qianwei_caculator.jpg" alt="Author image">
+								<div class="author-info">
+									竞品分析
+									<span class="position">千维计算器</span>
+								</div>
+							</div>
+	
+							<div style="position: relative;left:30%; display: flex;justify-content: center;width: 40%;">
+								<img src="images/portfolio/qianwei_cacl_interface.jpg">
+							</div>
+	
+							<p>千维计算器是一款可以科学计算、办公记账、尺寸度量的软件。
+								其主要功能之一是科学计算器，支持复杂的计算表达式运算，
+								内置常见数学单位、物理单位、化学单位、汇率、进制、亲戚关系，
+								可以一键换算。还有厘米尺子功能，可用于度量手机长度内的物品尺寸。
+								千维计算器的缺点：
+								首先是科学计算器功能具有极强的可代替性，操作不便，
+								弹窗教程每打开一次便要经历一次，且无法跳过。其次是单位换算功能局限于数据与数据的转换，是各种软件功能的集合体，不支持一键导入数据，并不具备创新性。最后的厘米尺子功能也相当鸡肋，按钮操作不灵敏，手机长度就是度量长度的极限，不支持ai测距，使用和操作起来非常麻烦。总的来讲该产品虽集合了多种功能，但仍然未能跳脱出原有的单位换算工具的框架，仅能进行数据之间的运算和转换，而缺乏将数据转化为具象化认知的能力。
+							</p>
+						</li> <!-- end slide -->
+	
+						<li>
+							<div class="testimonial-author" style="padding-bottom: 5%;">
+								<img src="images/icons/dan_wei_zhuanhuantong.jpg" alt="Author image">
+								<div class="author-info">
+									竞品分析
+									<span>单位转换通</span>
+								</div>
+							</div>
+	
+							<div style="position: relative;left:30%; display: flex;justify-content: center;width: 40%;">
+								<img src="images/portfolio/danwei_cacl_interface.jpg">
+							</div>
+	
+							<p>
+							单位转换通提供150多种单位换算，涵盖物理单位、电学单位、光学单位等，可以进行服饰尺码的换算以及电脑性能、进制转换等，还提供各种实验室功能。
+							此产品实用性强，适用性广并且具有相当的专业性。它操作简便，主要提供数值转换功能，用户输入一个数值并选择相应的单位，即可计算出对应的其他单位数值，但缺乏直观性，用户难以直接感受单位之间的转换关系。
+							秦始皇软件则在传统单位换算的基础上，将单位之间的转换关系具象化，将抽象的数值转换为用户可以接触到的具象物体的尺寸，使得用户在操作过程中能够更直观地理解单位之间的关系，提高用户体验。
+							</p>
+						</li>
+
+					</ul> <!-- end slides -->
+	
+				</div> <!-- end flexslider -->
+	
+			</div> <!-- end row -->
+	
+		</section> <!-- end testimonials section -->
+
+	<!-- About Section
+   ================================================== -->
+ 
+   <section id="contact">
+		<div class="row section-head">
+			<div class="twelve columns">
+				<h1 style="color:#000; font-size: 24px; font-weight: bold;">联系我们<span>.</span></h1>
+				<hr />
+			</div>
+			<div class="row">
+
+	<div id="contact-form" class="six columns tab-whole left">
+
+		<!-- form -->
+		<form name="contactForm" id="contactForm" method="post" action="">
+			<fieldset>
+
+				<div class="group">
+					<input name="contactName" type="text" id="contactName" placeholder="姓名" value=""
+						minLength="2" required />
+				</div>
+				<div>
+					<input name="contactEmail" type="email" id="contactEmail" placeholder="邮箱" value=""
+						required />
+				</div>
+				<div>
+					<textarea name="contactMessage" id="contactMessage" placeholder="信息" rows="10"
+						cols="50" required></textarea>
+				</div>
+				<div>
+					<button class="submitform">提交</button>
+					<div id="submit-loader">
+						<div class="text-loader">Sending...</div>
+						<div class="s-loader">
+							<div class="bounce1"></div>
+							<div class="bounce2"></div>
+							<div class="bounce3"></div>
+						</div>
+					</div>
+				</div>
+
+			</fieldset>
+		</form> <!-- Form End -->
+
+		<!-- contact-warning -->
+		<div id="message-warning"></div>
+		<!-- contact-success -->
+		<div id="message-success">
+			<i class="icon-ok"></i>Your message was sent, thank you!<br />
+		</div>
+
+	</div>
+
+	<div class="six columns tab-whole right">
+		<p class="lead" style="color: #333333;">我们的小组成员为靳天阳、郑羽欣、蒋卓含。我们致力于制作一款将单位转换具象化的软件，帮助人们在日常生活中更便捷地估算所需物品的单位、数量、重量，让科技改变世界。我们的远期目标为<br>○使用AR测距，借助手机或人手的尺寸将数字转化为现实尺度;<br>○直接将尺寸较大的设备作为物理尺度，在屏幕上显示尺寸轮廓。
+		<h3 class="address">联系方式</h3>
+
+		<p style="color: #333333;">
+			邮箱：15351677668@163.com<br>
+			电话：17795878367<br>
+			地址：陕西省西安市咸宁西路28号西安交通大学兴庆校区
+			邮编：710049
+		</p>
+	</div>
+	<br>
+	<br>
+	<div class="twelve columns">
+		<h1 style="color:#000; font-size: 24px; font-weight: bold;">分工示意图<span>.</span></h1>
+		<hr />
+	</div>
+	<div>
+		<img src="images/assignment.png" alt="assignment">
+	</div>
+
+		</div> <!-- end row -->
+	</section> <!-- end contact -->
+
+	<!-- Footer
+   ================================================== -->
+	<footer>
+
+		<div class="row">
+
+			<div class="twelve columns content group">
+
+
+				<div class="info">
+
+					<div class="footer-logo"></div>
+
+					<p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+						Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem
+						nibh id elit.
+					</p>
+
+				</div>
+
+			</div>
+
+			<div id="go-top">
+				<a class="smoothscroll go-top-link" title="Back to Top" href="#hero">回到首页<i class="fa fa-angle-up"></i></a>
+			  </div>
+			
+		</div> <!-- end row -->
+
+
+
+
+	<!-- Java Script
+   ================================================== -->
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/jquery-migrate-1.2.1.min.js"></script>
+	<script src="js/jquery.flexslider-min.js"></script>
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/jquery.validate.min.js"></script>
+	<script src="js/jquery.fittext.js"></script>
+	<script src="js/jquery.placeholder.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/main.js"></script>
+	<script> $(function() {
+		$('#main-header').addClass('opaque');
+	  });
+	  </script>
+
+</body>
+
+</html>
