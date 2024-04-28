@@ -1640,6 +1640,9 @@ ul#nav li.current a:after {
 	transform: translateY(-100%);
 }
 
+.contact-form{
+	background-color: #fff8dc
+}
 /* 
 /* 09. =services
 /* =================================================================== */
@@ -1975,17 +1978,18 @@ ul#nav li.current a:after {
 #testimonial-slider .testimonial-author img {
 	width: 72px;
 	height: 72px;
-	margin-right: 10px;
 	display: inline-block;
 	border-radius: 50%;
 	border: 6px solid white;
 	vertical-align: middle;
+	text-align: center;
 }
 
 #testimonial-slider .testimonial-author .author-info {
 	display: inline-block;
 	vertical-align: middle;
-	text-align: left;
+	position: relative;
+	text-align: center;
 }
 
 #testimonial-slider .testimonial-author .author-info span {
