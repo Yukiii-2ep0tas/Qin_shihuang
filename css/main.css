@@ -1648,7 +1648,7 @@ ul#nav li.current a:after {
 /* =================================================================== */
 
 #services {
-	background: transparent url(../images/bg2.png) repeat-y;
+	background: transparent url(../images/bg2.jpg) repeat-y;
 	background-size: auto 100%; /* 保持背景图片在水平方向上的原始比例，垂直方向上填满 */
 	width: 100%;
 	position: left;
@@ -1781,7 +1781,7 @@ ul#nav li.current a:after {
 /* =================================================================== */
 
 #about {
-	background: transparent url(../images/bg3.png) repeat-y;
+	background: #111417;
 	padding-top: 120px;
 	padding-bottom: 120px;
 	border-bottom: 1px solid #15191d;
@@ -2652,7 +2652,7 @@ footer .social-links li:first-child {
 	color: #FFFFFF;
 	text-align: center;
 	border-radius: 3px;
-	font: 20px/54px "raleway-heavy", sans-serif;
+	font: 12px/54px "raleway-heavy", sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	-moz-transition: all 0.3s ease-in-out;
