@@ -10,25 +10,33 @@
         <div class="header">
             <div id="title">秦始皇</div>
         </div>
-        <div class="slides"></div>
+        <div class="slides">
+            <div class="carousel-container">
+                <!-- 图片源可替换为实际项目中的图片 -->
+                <img class="carousel-item" src="images/slides/slides_1.png">
+                <img class="carousel-item" src="images/slides/slides_2.png">
+                <img class="carousel-item" src="images/slides/slides_3.png">
+            </div>
+        </div>
         <div id="testimonials">
             <img src="images/icons/Start_conv.png">
         </div>
         <div class="functions">
-            <div id="start_conv_button" onclick="location.href='Conversion_Pad.html'">
-                <div style="display: flex;align-items: center;left: 10vw;">
+            <div id="start_conv_button">
+                <div style="display: flex;align-items: center;left: 10vw;"
+                    onclick="location.href='Conversion_Pad.html'">
                     <img src="images/icons/Qin.png" style="position: relative;left: 5vw;height: 13vh;">
                     <p style="color: white;font-size: 180%;position: relative;left: 20%;font-weight: 700;">开始换算</p>
                 </div>
             </div>
-            <div id="community_button" onclick="location.href='Community.html'">
-                <div>
-                    <img src="images/icons/Conv_Knowledges.png" style="height: 21vh;">
+            <div id="community_button">
+                <div onclick="location.href='Community.html'">
+                    <img src="images/icons/Conv_Knowledges.png" style="height: 21vh;position: relative;left: 6%;">
                     <p style="position: relative;top:-6vh;left: 12vw;color: white;font-weight: 600;">经验社区</p>
                 </div>
             </div>
             <div id="knowledges_button">
-                <div>
+                <div onclick="location.href='Community.html'">
                     <img src="images/icons/Conv_Community.png">
                     <span style="position: relative;left:-1vw;top:-4vh;color: white;font-weight: 600;">换算知识</span>
                 </div>
@@ -42,7 +50,7 @@
         </div>
         <div class="plate">
             <div id='home'>
-                <img src = 'images/icons/Home.svg' height=40px>
+                <img src='images/icons/Home.svg' height=40px>
                 <p>主页</p>
             </div>
             <div id='history'>
@@ -50,8 +58,71 @@
                 <p>换算历史</p>
             </div>
             <div id='myself'>
-                <img src = 'images/icons/User.svg' height="40px">
+                <img src='images/icons/User.svg' height="40px">
                 <p>我</p>
             </div>
         </div>
+    </div>
+
+
+    <script>
+        const carouselImages = document.querySelectorAll(".carousel-item");
+        const imageCount = carouselImages.length;
+        let currentIndex = 0;
+        let timerId;
+
+        function initCarousel() {
+            setupView();
+            bindEvents();
+            startAutoPlay();
+        }
+
+        initCarousel();
+
+        function setupView() {
+            const halfLength = Math.floor(imageCount / 2);
+            for (let i = 0; i < halfLength; i++) {
+                let leftIndex = (currentIndex - i - 1 + imageCount) % imageCount;
+                let rightIndex = (currentIndex + i + 1) % imageCount;
+
+                carouselImages[leftIndex].style.transform = `translateX(${-150 * (i + 1)}px) translateZ(${200 - i * 100}px) rotateY(30deg)`;
+                carouselImages[rightIndex].style.transform = `translateX(${150 * (i + 1)}px) translateZ(${200 - i * 100}px) rotateY(-30deg)`;
+            }
+            carouselImages[currentIndex].style.transform = `translateZ(300px)`;
+        }
+
+        function bindEvents() {
+            for (let i = 0; i < imageCount; i++) {
+                (function (index) {
+                    carouselImages[index].addEventListener('click', function () {
+                        currentIndex = index;
+                        setupView();
+                    });
+
+                    carouselImages[index].addEventListener('mouseenter', function () {
+                        clearInterval(timerId);
+                    });
+
+                    carouselImages[index].addEventListener('mouseout', function () {
+                        startAutoPlay();
+                    });
+                })(i);
+            }
+        }
+
+        function startAutoPlay() {
+            timerId = setInterval(function () {
+                currentIndex = (currentIndex + 1) % imageCount;
+                setupView();
+            }, 4000);
+        }
+    </script>
+
+    <script>
+        document.getElementById('knowledges_button').addEventListener('click', function () {
+            // 重定向到页面B，并跳转到名为target的section
+            window.location.href = 'Home.html#services';
+        });
+    </script>
+
 </body>
