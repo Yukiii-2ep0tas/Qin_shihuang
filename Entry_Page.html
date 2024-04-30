@@ -3,57 +3,61 @@
 <head>
     <link rel="stylesheet" href="css/entry_page.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8">
+    <title>欢迎使用“秦始皇”！</title>
 </head>
 
 <body style="margin: 0;padding: 0;gap: 0;">
-    <div class="center_div">
-        <div class="header">
-            <div id="title">秦始皇</div>
-        </div>
-        <div class="slides">
-            <div class="carousel-container">
-                <!-- 图片源可替换为实际项目中的图片 -->
-                <img class="carousel-item" src="images/slides/slides_1.png">
-                <img class="carousel-item" src="images/slides/slides_2.png">
-                <img class="carousel-item" src="images/slides/slides_3.png">
+    <div id='entry_center_div_page' class="page">
+        <div id="entry_center_div">
+            <div class="header">
+                <div id="title">秦始皇</div>
             </div>
-        </div>
-        <div id="testimonials">
-            <img src="images/icons/Start_conv.png">
-        </div>
-        <div class="functions">
-            <div id="start_conv_button">
-                <div style="display: flex;align-items: center;left: 10vw;"
-                    onclick="location.href='Conversion_Pad.html'">
-                    <img src="images/icons/Qin.png" style="position: relative;left: 5vw;height: 13vh;">
-                    <p style="color: white;font-size: 180%;position: relative;left: 20%;font-weight: 700;">开始换算</p>
+            <div class="slides">
+                <div class="carousel-container">
+                    <img class="carousel-item" src="images/slides/slides_1.png">
+                    <img class="carousel-item" src="images/slides/slides_2.png">
+                    <img class="carousel-item" src="images/slides/slides_3.png">
                 </div>
             </div>
-            <div id="community_button">
-                <div onclick="location.href='Community.html'">
-                    <img src="images/icons/Conv_Knowledges.png" style="height: 21vh;position: relative;left: 6%;">
-                    <p style="position: relative;top:-6vh;left: 12vw;color: white;font-weight: 600;">经验社区</p>
-                </div>
+            <div id="testimonials">
+                <img src="images/icons/Start_conv.png">
             </div>
-            <div id="knowledges_button">
-                <div onclick="location.href='Community.html'">
-                    <img src="images/icons/Conv_Community.png">
-                    <span style="position: relative;left:-1vw;top:-4vh;color: white;font-weight: 600;">换算知识</span>
+            <div class="functions">
+                <div id="start_conv_button">
+                    <div style="display: flex;align-items: center;left: 10vw;"
+                        onclick="location.href='Conversion_Pad.html'">
+                        <img src="images/icons/Qin.png" style="position: relative;left: 5vw;height: 13vh;">
+                        <p style="color: white;font-size: 180%;position: relative;left: 20%;font-weight: 700;">开始换算</p>
+                    </div>
                 </div>
-            </div>
-            <div id="about_button" onclick="location.href = 'Home.html'">
-                <div>
-                    <img src="images/icons/About_Us.png">
-                    <span style="position: relative;left:-1vw;top:-4vh;color: white;font-weight: 600;">关于我们</span>
+                <div id="community_button">
+                    <div onclick="location.href='Community.html'">
+                        <img src="images/icons/Conv_Knowledges.png" style="height: 21vh;position: relative;left: 6%;">
+                        <p style="position: relative;top:-6vh;left: 12vw;color: white;font-weight: 600;">经验社区</p>
+                    </div>
+                </div>
+                <div id="knowledges_button">
+                    <div onclick="location.href='Community.html'">
+                        <img src="images/icons/Conv_Community.png">
+                        <span style="position: relative;left:-1vw;top:-4vh;color: white;font-weight: 600;">换算知识</span>
+                    </div>
+                </div>
+                <div id="about_button" onclick="location.href = 'Home.html'">
+                    <div>
+                        <img src="images/icons/About_Us.png">
+                        <span style="position: relative;left:-1vw;top:-4vh;color: white;font-weight: 600;">关于我们</span>
+                    </div>
                 </div>
             </div>
         </div>
+
         <div class="plate">
-            <div id='home'>
+            <div id='entry_center_div'>
                 <img src='images/icons/Home.svg' height=40px>
                 <p>主页</p>
             </div>
-            <div id='history'>
+            <div id='conv_history'>
                 <img src="images/icons/History.svg" height="40px">
                 <p>换算历史</p>
             </div>
@@ -63,6 +67,65 @@
             </div>
         </div>
     </div>
+
+
+    <div id="conv_history_page" class="page">
+        <div id="conv_history">
+            <div id="title">
+                换算历史
+            </div>
+            <div id="history_grid">
+                <div id="history_1" class='history_record'>
+                    <div class="history_info">
+                        <div class="history_time">
+                            2024-4-19
+                        </div>
+                        <div class="history_name">
+                            西湖-矿泉水
+                        </div>
+                    </div>
+                    <img src="images/icons/History.svg">
+                </div>
+                <div id="history_2" class='history_record'>
+                    <div class="history_info">
+                        <div class="history_time">
+                            2024-4-19
+                        </div>
+                        <div class="history_name">
+                            西湖-矿泉水
+                        </div>
+                    </div>
+                    <img src="images/icons/History.svg">
+                </div>
+                <div id="history_3" class='history_record'>
+                    <div class="history_info">
+                        <div class="history_time">
+                            2024-4-19
+                        </div>
+                        <div class="history_name">
+                            西湖-矿泉水
+                        </div>
+                    </div>
+                    <img src="images/icons/History.svg">
+                </div>
+            </div>
+        </div>
+        <div class="plate">
+            <div id='entry_center_div'>
+                <img src='images/icons/Home.svg' height=40px>
+                <p>主页</p>
+            </div>
+            <div id='conv_history'>
+                <img src="images/icons/History.svg" height="40px">
+                <p>换算历史</p>
+            </div>
+            <div id='myself'>
+                <img src='images/icons/User.svg' height="40px">
+                <p>我</p>
+            </div>
+        </div>
+    </div>
+
 
 
     <script>
@@ -122,6 +185,32 @@
         document.getElementById('knowledges_button').addEventListener('click', function () {
             // 重定向到页面B，并跳转到名为target的section
             window.location.href = 'Home.html#services';
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const plate = document.querySelector('.plate');
+            const buttons = plate.querySelectorAll('div');
+
+            // 为每个按钮添加点击事件
+            buttons.forEach(button => {
+                button.addEventListener('click', function () {
+                    // 移除所有按钮的'active'类
+                    buttons.forEach(btn => btn.classList.remove('active'));
+                    // 给当前点击的按钮添加'active'类
+                    this.classList.add('active');
+
+                    // 根据点击的按钮切换页面显示
+                    const pageId = this.id;
+                    // 假设页面内容的div也有相应的id，例如 'home-page', 'history-page' 等
+                    const pages = document.querySelectorAll('.page');
+                    pages.forEach(page => {
+                        page.style.display = 'none'; // 隐藏所有页面
+                    });
+                    document.getElementById(pageId + '_page').style.display = 'flex'; // 显示目标页面
+                });
+            });
         });
     </script>
 

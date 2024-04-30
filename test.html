@@ -1,13 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="row section-head">
+<head>
+  <meta charset="UTF-8">
+  <title>3D轮播图</title>
+</head>
 
-  <div class="twelve columns">
-  
-    <h1 style="color:#000; font-size: 24px; font-weight: bold;">产品定位</h1>
-    <hr />
-    <p style="color: #000;">一款将单位换算具象化的工具软件（小程序），将数据转化为直观认知。主要适配手机、平板端两种界面。</p>
-  
-    </div>
-  
-</div> <!-- end section-head -->
-  
+<body>
+  <div class="carousel-container">
+    <!-- 图片源可替换为实际项目中的图片 -->
+    <img class="carousel-item" src="images/slides/slides_1.png">
+    <img class="carousel-item" src="images/slides/slides_2.png">
+    <img class="carousel-item" src="images/slides/slides_3.png">
+  </div>
+
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .carousel-item {
+      height: 100px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      border-radius: 8px;
+      background-color: rgba(255,255,255,0.6);
+      backdrop-filter: blur(20px);
+      transition: transform 1s ease-in-out;
+    }
+
+    .carousel-container {
+      position: absolute;
+      width: 800px;
+      height: 250px;
+      background-color: rgb(206, 206, 206);
+      perspective: 800px;
+      transform-style: preserve-3d;
+    }
+  </style>
+
+  <script>
+    const carouselImages = document.querySelectorAll(".carousel-item");
+    const imageCount = carouselImages.length;
+    let currentIndex = 0;
+    let timerId;
+
+    function initCarousel() {
+      setupView();
+      bindEvents();
+      startAutoPlay();
+    }
+
+    initCarousel();
+
+    function setupView() {
+      const halfLength = Math.floor(imageCount / 2);
+      for (let i = 0; i < halfLength; i++) {
+        let leftIndex = (currentIndex - i - 1 + imageCount) % imageCount;
+        let rightIndex = (currentIndex + i + 1) % imageCount;
+
+        carouselImages[leftIndex].style.transform = `translateX(${-150 * (i + 1)}px) translateZ(${200 - i * 100}px) rotateY(30deg)`;
+        carouselImages[rightIndex].style.transform = `translateX(${150 * (i + 1)}px) translateZ(${200 - i * 100}px) rotateY(-30deg)`;
+      }
+      carouselImages[currentIndex].style.transform = `translateZ(300px)`;
+    }
+
+    function bindEvents() {
+      for (let i = 0; i < imageCount; i++) {
+        (function (index) {
+          carouselImages[index].addEventListener('click', function () {
+            currentIndex = index;
+            setupView();
+          });
+
+          carouselImages[index].addEventListener('mouseenter', function () {
+            clearInterval(timerId);
+          });
+
+          carouselImages[index].addEventListener('mouseout', function () {
+            startAutoPlay();
+          });
+        })(i);
+      }
+    }
+
+    function startAutoPlay() {
+      timerId = setInterval(function () {
+        currentIndex = (currentIndex + 1) % imageCount;
+        setupView();
+      }, 4000);
+    }
+  </script>
+</body>
+
+</html>
