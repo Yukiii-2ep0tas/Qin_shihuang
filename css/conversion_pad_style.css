@@ -165,8 +165,8 @@ body {
 }
 
 .sidebar #numpad_exp_fold{
-  position: absolute;
-  bottom: 5.5%;
+  position: relative;
+  top:60vh;
 }
 
 .sidebar.expanded #numpad_exp_fold{
@@ -273,5 +273,5 @@ body {
   background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
   display: none; /* 默认不显示 */
   transition: background-color 0.5s ease; /* 过渡效果 */
-  z-index: 2000;
+  z-index: 1950;
 }
