@@ -32,18 +32,18 @@
                     </div>
                 </div>
                 <div id="community_button">
-                    <div onclick="location.href='Community.html'">
-                        <img src="images/icons/Conv_Knowledges.png" style="height: 21vh;position: relative;left: 6%;">
-                        <p style="position: relative;top:-6vh;left: 12vw;color: white;font-weight: 600;">经验社区</p>
+                    <div onclick="location.href='Community.html'" style="display: flex;flex-direction: column;">
+                        <img src="images/icons/Conv_Knowledges.png" style="height: 21vh;position: relative;">
+                        <p style="position: relative;top:-2vh;color: white;font-weight: 600;text-align: center;">经验社区</p>
                     </div>
                 </div>
                 <div id="knowledges_button">
-                    <div onclick="location.href='Community.html'">
+                    <div>
                         <img src="images/icons/Conv_Community.png">
                         <span style="position: relative;left:-1vw;top:-4vh;color: white;font-weight: 600;">换算知识</span>
                     </div>
                 </div>
-                <div id="about_button" onclick="location.href = 'Home.html'">
+                <div id="about_button" onclick="location.href = 'About.html'">
                     <div>
                         <img src="images/icons/About_Us.png">
                         <span style="position: relative;left:-1vw;top:-4vh;color: white;font-weight: 600;">关于我们</span>
@@ -60,7 +60,7 @@
                 换算历史
             </div>
             <div id="history_grid">
-                <div id="history_1" class='history_record'>
+                <div id="history_1" class='history_record' onclick="location.href='Conversion_Pad.html?input_item_name=西湖&output_item_name=一瓶农夫山泉矿泉水'">
                     <div class="history_info">
                         <div class="history_time">
                             2024-4-19
@@ -71,7 +71,7 @@
                     </div>
                     <img src="images/icons/History.svg">
                 </div>
-                <div id="history_2" class='history_record'>
+                <div id="history_2" class='history_record' onclick="location.href='Conversion_Pad.html?input_item_name=橘子&output_item_name=手机'">
                     <div class="history_info">
                         <div class="history_time">
                             2024-4-17
@@ -82,7 +82,7 @@
                     </div>
                     <img src="images/icons/History.svg">
                 </div>
-                <div id="history_3" class='history_record'>
+                <div id="history_3" class='history_record' onclick="location.href='Conversion_Pad.html?input_item_name=一百万人民币&output_item_name=一瓶农夫山泉矿泉水'">
                     <div class="history_info">
                         <div class="history_time">
                             2024-4-16
@@ -97,20 +97,6 @@
         </div>
     </div>
 
-    <div class="page" id="page3">
-        <div id="myself">
-            <div id="title">
-                我
-            </div>
-            <div id="user_info">
-                <div id = avatar>
-                    <img src="images/avatars/avatar-1.jpg">
-                </div>
-
-            </div>
-        </div>
-
-    </div>
 
     <div class="plate">
         <div id='entry_center_div' class='plate_btn' onclick="switchPage(1)">
@@ -120,10 +106,6 @@
         <div id='conv_history' class='plate_btn'>
             <img src="images/icons/History.svg" height="40px" onclick="switchPage(2)">
             <p>换算历史</p>
-        </div>
-        <div id='myself' class='plate_btn' onclick="switchPage(3)">
-            <img src='images/icons/User.svg' height="40px">
-            <p>我</p>
         </div>
     </div>
 
@@ -185,7 +167,7 @@
     <script>
         document.getElementById('knowledges_button').addEventListener('click', function () {
             // 重定向到页面B，并跳转到名为target的section
-            window.location.href = 'Home.html#services';
+            window.location.href = 'About.html#services';
         });
     </script>
 

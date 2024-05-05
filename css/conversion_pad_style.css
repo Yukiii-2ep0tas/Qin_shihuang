@@ -250,3 +250,28 @@ body {
   display: inline; /* 显示选项文本 */
 }
 
+/* 以下是控制cmd_panel的部分 */
+
+#iframe-container {
+  position: fixed;
+  top: 20%;
+  left: 46%;
+  transform: translate(-30%, -30%);
+  width: 40%; /* 根据需要调整宽度 */
+  max-width: 600px; /* 最大宽度限制 */
+  border: none;
+  display: none; /* 默认不显示 */
+  z-index: 2000;
+}
+
+#cmd_panel_background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
+  display: none; /* 默认不显示 */
+  transition: background-color 0.5s ease; /* 过渡效果 */
+  z-index: 2000;
+}

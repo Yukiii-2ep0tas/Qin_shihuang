@@ -1,9 +1,11 @@
 <!DOCTYPE html>
+
 <head>
     <link rel="stylesheet" href="css/conversion_pad_style.css">
     <meta charset="UTF-8">
     <title>换算面板</title>
 </head>
+
 <body>
     <div id='main_container'>
         <div class="container">
@@ -48,18 +50,30 @@
                 <div id="input_search_panel" class="embedded-content">
                     <iframe src="Input_Search_Panel.html" frameborder="0" width="80%" height="100%"></iframe>
                 </div>
-                <div id="input_display" style="position: absolute; left:95%; top: 75%; transform: translate(-100%,-50%);font-size: 30px; text-align: right; color: black;"></div>
-                <div id="input_item_name" style="position: relative;left: 5%; top:20%;font-size: 30px;text-align: left;color: black;"></div>
+                <div id="input_display"
+                    style="position: absolute; left:95%; top: 75%; transform: translate(-100%,-50%);font-size: 30px; text-align: right; color: black;">
+                </div>
+                <div id="input_item_name"
+                    style="position: relative;left: 5%; top:20%;font-size: 30px;text-align: left;color: black;"></div>
+            </div>
+            <div id="iframe-container">
+                <iframe id= 'cmd_panel' src="Command_Panel.html" style="width: 40vw; height: 40vw;border-radius: 2vh;"></iframe>
+                <div id="cmd_panel_background"></div>
             </div>
             <div id="output_area">
                 <div class="search_bar" onclick="toggle_output_search_panel()">
-                    <div style="color: black;font-size: 75%"><img src="images/icons/Search.svg"><span>搜索</span></div>
+                    <div style="color: black;font-size: 75%"><img src="images/icons/Search.svg"><span>搜索</span>
+                    </div>
                 </div>
                 <div id="output_search_panel" class="embedded-content">
                     <iframe src="Output_Search_Panel.html" frameborder="0" width="80%" height="100%"></iframe>
                 </div>
-                <div id="result_display" style="position: absolute; left:95%; top: 75%; transform: translate(-100%,-50%);font-size: 30px; text-align: right; color: black;"></div>
-                <div id="output_item_name" style="position: relative; left: 5%; top:20%;font-size: 30px;text-align: left;color: black;"></div>
+                <div id="result_display"
+                    style="position: absolute; left:95%; top: 75%; transform: translate(-100%,-50%);font-size: 30px; text-align: right; color: black;">
+                </div>
+                <div id="output_item_name"
+                    style="position: relative; left: 5%; top:20%;font-size: 30px;text-align: left;color: black;">
+                </div>
             </div>
             <div class="numpad_area" id="numpad_area">
                 <div onclick="input(1)">1</div>
@@ -82,46 +96,56 @@
     </div>
 </body>
 <script>
-    function clean_all(){
+    function clean_all() {
         document.getElementById('input_display').textContent = '';
         document.getElementById('result_display').textContent = '';
     }
-    function input(num){
+    function input(num) {
         var display = document.getElementById('input_display');
         var current_value = display.textContent;
-        if (current_value === '0' && num === '0'){
+        if (current_value === '0' && num === '0') {
             display.textContent = '2 zero mistake';//不重复添加0
             return;
         }
         display.textContent = current_value + num;
     }
-    function decimal_dot(){
+    function decimal_dot() {
         var display = document.getElementById('input_display');
         var current_value = display.textContent;
-        if (current_value.includes('.')){
+        if (current_value.includes('.')) {
             display.textContent = '2 decimal dots mistake';
             return;
         }
         display.textContent += '.'
     }
-    function ans(){
+    function ans() {
         var result_display = document.getElementById('result_display');
         var input_item_name = document.getElementById('input_item_name');
         var input_number = parseFloat(document.getElementById('input_display'));
         result_display.textContent = 363000000000;
     }
-    function backspace(){
+    function backspace() {
         var display = document.getElementById('input_display');
         current_value = display.textContent;
-        length = current_value.length-1;
-        current_value = current_value.slice(0,length);
+        length = current_value.length - 1;
+        current_value = current_value.slice(0, length);
         display.textContent = current_value;
     }
-    function toggle_input_search_panel(){
+    function by_text() {
+        var iframe = document.getElementById('cmd_panel');
+        var background = document.getElementById('cmd_panel_background');
+        var container = document.getElementById('iframe-container');
+
+        // 显示iframe和背景遮罩
+        iframe.style.display = 'block';
+        background.style.display = 'block';
+        container.style.display = 'block';
+    }
+    function toggle_input_search_panel() {
         var content = document.getElementById('input_search_panel');
         content.style.display = content.style.display === 'none' ? 'block' : 'none';
     }
-    function toggle_output_search_panel(){
+    function toggle_output_search_panel() {
         var content = document.getElementById('output_search_panel');
         content.style.display = content.style.display === 'none' ? 'block' : 'none';
     }
@@ -130,44 +154,44 @@
     var keyboard = document.getElementById('numpad_area');
     var toggleButton = document.getElementById('numpad_exp_fold');
 
-  // 监听按钮点击事件
-    toggleButton.addEventListener('click', function() {
-    // 切换键盘的类，以控制显示和隐藏
-    if (keyboard.classList.contains('expanded')) {
-      keyboard.classList.remove('expanded');
-    } else {
-      keyboard.classList.add('expanded');
-    }
-  });
-
-    document.addEventListener('DOMContentLoaded', function() {
-    const sidebar = document.querySelector('.sidebar');
-    const toggleButton = document.getElementById('toggleButton');
-
-    // 展开侧边栏并旋转图标
-    function expandSidebar() {
-        sidebar.classList.add('expanded');
-        toggleButton.style.animation = 'rotate 0.3s forwards';
-    }
-
-    // 收起侧边栏并重置图标
-    function collapseSidebar() {
-        sidebar.classList.remove('expanded');
-        toggleButton.style.animation = 'rotate 0.3s reverse';
-    }
-
-    // 切换侧边栏状态
-    toggleButton.addEventListener('click', function() {
-        if (sidebar.classList.contains('expanded')) {
-            collapseSidebar();
+    // 监听按钮点击事件
+    toggleButton.addEventListener('click', function () {
+        // 切换键盘的类，以控制显示和隐藏
+        if (keyboard.classList.contains('expanded')) {
+            keyboard.classList.remove('expanded');
         } else {
-            expandSidebar();
+            keyboard.classList.add('expanded');
         }
     });
-});
-    
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const sidebar = document.querySelector('.sidebar');
+        const toggleButton = document.getElementById('toggleButton');
+
+        // 展开侧边栏并旋转图标
+        function expandSidebar() {
+            sidebar.classList.add('expanded');
+            toggleButton.style.animation = 'rotate 0.3s forwards';
+        }
+
+        // 收起侧边栏并重置图标
+        function collapseSidebar() {
+            sidebar.classList.remove('expanded');
+            toggleButton.style.animation = 'rotate 0.3s reverse';
+        }
+
+        // 切换侧边栏状态
+        toggleButton.addEventListener('click', function () {
+            if (sidebar.classList.contains('expanded')) {
+                collapseSidebar();
+            } else {
+                expandSidebar();
+            }
+        });
+    });
+
     // 监听来自iframe的消息
-    window.addEventListener('message', function(event) {
+    window.addEventListener('message', function (event) {
         // 检查消息的来源和数据结构
         if (event.data && event.data.action === 'update_input_item_name') {
             // 更新父页面的内容
@@ -181,5 +205,9 @@
 </script>
 
 <script>
-    
+    document.addEventListener('DOMContentLoaded', function () {
+        var params = new URLSearchParams(window.location.search);
+        document.getElementById('input_item_name').textContent = params.get('input_item_name');
+        document.getElementById('output_item_name').textContent = params.get('output_item_name');
+    });
 </script>
